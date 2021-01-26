@@ -1,7 +1,7 @@
 ---
 title: "About this blog"
 description: |
-  Some additional details about the blog
+  Re-telling stories using data visualisations, from a student's perspective
 ---
 
 ```{r setup, include=FALSE}

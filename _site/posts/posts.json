@@ -1,36 +1,36 @@
 [
   {
     "path": "posts/welcome/",
-    "title": "Welcome to My idea",
-    "description": "Welcome to our new blog, My idea. We hope you enjoy \nreading what we have to say!",
+    "title": "Welcome!",
+    "description": "Welcome to my new blog, DataViz Makeover Blog. I hope you enjoy \nreading my posts!",
     "author": [
       {
         "name": "Amanda",
         "url": "https://example.com/amandatwl"
       }
     ],
-    "date": "2021-01-06",
+    "date": "2021-01-26",
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-01-06T15:18:42+08:00",
+    "last_modified": "2021-01-26T15:49:07+08:00",
     "input_file": "welcome.utf8.md"
   },
   {
     "path": "posts/2021-01-06-dataviz-makeover-1/",
     "title": "My First DataViz Makeover",
-    "description": "A short description of the post.",
+    "description": "ISSS608 Visual Analytics and Applications - DataViz Makeover 1",
     "author": [
       {
         "name": "Amanda",
         "url": "https://example.com/amandatwl"
       }
     ],
-    "date": "2021-01-06",
+    "date": "2021-01-26",
     "categories": [],
-    "contents": "\r\nThe Data Visualisation\r\nSource: Report: Labour Force in Singapore 2019, Ministry of Manpower(a) Critique of current visualisation\r\nClarity\r\nAesthetics\r\n(b) Suggestions to improve the current design\r\nSketch of proposed design\r\n(c) Final product of proposed visualisation\r\n(d) Step-by-step description to prepare the final product\r\n(e) Major observations revealed by the final product\r\n\r\n\r\n\r\n",
+    "contents": "\r\n\r\nContents\r\nThe Data Visualisation\r\n(a) Critique of current visualisation\r\nClarity\r\nAesthetics\r\n\r\n(b) Suggestions to improve the current design\r\nSketch of proposed design\r\n\r\n(c) Final product of proposed visualisation\r\n(d) Step-by-step description to prepare the final product\r\n(e) Major observations revealed by the final product\r\n\r\nThe Data Visualisation\r\nSource: Report: Labour Force in Singapore 2019, Ministry of Manpower(a) Critique of current visualisation\r\nClarity\r\nAesthetics\r\n(b) Suggestions to improve the current design\r\nSketch of proposed design\r\n(c) Final product of proposed visualisation\r\n(d) Step-by-step description to prepare the final product\r\n(e) Major observations revealed by the final product\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-01-26T15:40:58+08:00",
+    "last_modified": "2021-01-26T15:56:52+08:00",
     "input_file": "dataviz-makeover-1.utf8.md"
   }
 ]

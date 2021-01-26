@@ -1,14 +1,17 @@
 ---
 title: "My First DataViz Makeover"
 description: |
-  A short description of the post.
+  ISSS608 Visual Analytics and Applications - DataViz Makeover 1
 author:
   - name: Amanda
     url: https://example.com/amandatwl
-date: 01-06-2021
+    affiliation: Student of SMU MITB
+    affiliation_url: https://www.smu.edu.sg/
+date: 01-26-2021
 output:
   distill::distill_article:
     self_contained: false
+    toc: yes
 ---
 
 

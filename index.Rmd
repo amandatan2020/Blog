@@ -1,5 +1,5 @@
 ---
-title: "My idea"
+title: "DataViz Makeover Blog"
 site: distill::distill_website
 listing: posts
 ---

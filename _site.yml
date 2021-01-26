@@ -1,7 +1,7 @@
-name: "Blog"
-title: "My idea"
+name: "DataViz_Makeover"
+title: "Amanda's DataViz Web Blog"
 description: |
-  My idea
+  DataViz Makeover Blog
 output_dir: "_site"
 navbar:
   right:
