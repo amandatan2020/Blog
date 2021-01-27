@@ -1,7 +1,7 @@
 ---
 title: "About this blog"
 description: |
-  Re-telling stories using data visualisations, from a student's perspective
+  Re-telling stories with data visualisations, from a student's perspective
 ---
 
 ```{r setup, include=FALSE}

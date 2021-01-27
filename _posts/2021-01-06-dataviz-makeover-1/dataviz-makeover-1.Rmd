@@ -11,7 +11,6 @@ date: 01-26-2021
 output:
   distill::distill_article:
     self_contained: false
-    toc: yes
 ---
 
 
@@ -26,18 +25,86 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Clarity
 
+### 1. No proper labelling of graph axes and units used in table
 
+The visualisation has a chart title and sub-title to inform the audience that the graph shows data on resident labour force by age and the units are in per cent. However, the graph itself does not have the y-axis or its title or label, which lets the audience wonder what is the y-axis measure if one misses the small print of the chart sub-title. 
+
+The x-axis should be have a title to indicate that the data is grouped into age bands. The positioning of the x-axis just above the table values also created some confusion pertaining to the unit measure of the x-axis and y-axis. Therefore, in this visualisation, it is important to have proper axis titles and unit measures.
+
+### 2. Intended message not clearly conveyed by visualisation
+
+Looking at the visual alone (both graph and table), the message focus seems to be on the **spread across the different age bands** for the years 2009 and 2019, with two reference lines indicating the median age for each aforementioned year. The lead-in statements provide more information and numbers, and possible explanations for the **shift in share of the resident labour force**, which resulted in the increase in median age between 2009 and 2019. The lead-in statements further grouped the age bands ("aged 55 & over", "aged 25 to 54") in its description, which is inconsistent with the graph display. There is also mention of the Labour Force Participation Rate (LFPR) and its possible relationship with the labour force age, which is not reflected in the visualisation.
+
+With reference to the [original report](https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2019.aspx) on page 22, the entire visualisation and lead-in statements served to describe the trend that there are "more older residents in the labour force". This message is not clearly conveyed by the visualisation and is only explicitly mentioned at the end of the lead-in statements.
+
+When put together, the audience is overwhelmed by the information provided in the lead-in statements and underwhelmed by the graph with no annotations to highlight the trends. Effective visualisations should work the other way round, where the lead-in statements should set the context and background succinctly, and the visualisation should convey the data and the intended message in a concise manner.
+
+### 3. Use of line chart with categorical data plotted on the x-axis
+
+Line charts are frequently used to display time-series data, with the time factor plotted on the x-axis. In this visualisation, data is plotted for two time periods (2009 and 2019) but are represented as two series on the chart area instead, with the age band categories indicated on the x-axis. The use of wrong chart type led to some initial confusion on what the graph is trying to convey.
+
+### 4. Labour force age patterns between 2009 and 2019 were not shown
+
+The data for the years between 2009 and 2019 were not plotted on the graph, which diminishes the clarity of the visualisation. Questions on the integrity of the visualisation may also arise, such as whether the visualisation is trying to show what it wants the audience to see, or to hide certain trends that happened during those missing years.
+
+### 5. Data source and note on data values included in the visualisation
+
+Indicating the data source gives credibility to the visualisation and allows the audience to look into the data source in more detail. Adding a note to explain the rounding implication on summation of percentages is helpful to avoid questions from the more meticulous and detailed audience. The note also hinted that the data values shown are in percentages. The aesthetics could be further improved by aligning the two lines of text.
 
 ## Aesthetics
 
+### 1. Clear differentiation between data lines and reference lines
 
-# (b) Suggestions to improve the current design
+The audience is able to quickly differentiate the data from the reference lines, as the data is made more obvious by using thicker lines and the reference lines are thinner and dotted. 
 
-## Sketch of proposed design
+### 2. Well-placed labels on visualisation allows audience to identify groups of data
+
+The visualisation has well-placed labels to differentiate between 2009 and 2019 for each data visualisation, namely the line graphs, reference lines and table values. This eliminated the need for a legend as the audience can immediately know the year represented by which line. In addition, the label for the median reference line included the median value, giving the audience the information upfront without having the need to trace the reference line to the x-axis to look for the median age.
+
+The labels can be further improved by removing the word "June", as the intended message is concerned with the age over a longer period of time (in years), and does not require the exact month that the data is based on.
+
+### 3. Consistent use of colours allows audience to distinguish groups of data
+
+The visualisation defined a unique mapping between the data for each year and colour (grey for June 2009; blue for June 2019). This colour scheme is used consistently across the line graphs, reference lines and table, which makes it easier for the audience to locate and make comparisons in the visualisation. The colour palette used is kept simple, which makes the design of the visualisation clean and pleasant to look at.
+
+### 4. Use of background colour to highlight different parts of the visualisation
+
+The change in background colour allows the audience to identify different parts of the visualisation. The audience is able to quickly see that the line graph elements are on the light grey background, whereas the table elements are on a dark-coloured background.
+
+There is good contrast between the line graph and table. However, the attention of the audience is drawn to the table due to its darker colours. The background colour of the table can be improved by using lighter shades.
+
+# (b) Proposed design
+
+![Sketch of proposed design]()
+The proposed design attempts to convey the message that there are more older residents in the labour force more visually, while upholding the visualisation principles and best practices. The advantages of the proposed design are as follows:
+
+- Information in the original lead-in statements are represented graphically as much as possible, thus reducing the amount of text in the lead-in statements
+- Time factor is plotted on the x-axis with the appropriate use of stacked bar charts to visually differentiate between age bands
+- As there are 12 age bands, logical grouping of age bands according to Singapore's context helps to reduce the complexity of the visualisation and provide relevance to the Singaporean audience
+- Labour force age patterns for the entire time period from 2009 and 2019 are shown, providing a more complete story behind the data
+- Use of annotation to highlight and accentuate the intended message
 
 # (c) Final product of proposed visualisation
 
+The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found [here]().
+
 # (d) Step-by-step description to prepare the final product
+
+1. Verify data source of original visualisation
+    - Raw data for number of residents by age bands and median age from 2009 to 2019 were found in two separate Excel files T7 and T2 respectively
+    - There are multiple worksheets in T7, showing the overall number of residents by age bands and by sex
+2. Import relevant data tables into Tableau
+    - The two Excel files were imported as separate data sources
+    - Many null values were detected by Tableau after importing, as the data tables in the Excel files were formatted for easy reading and reporting
+    - The Tableau function Data Interpreter was used for the initial cleaning to remove the null values
+    - As the years were expressed as column headers in the data table on number of residents by age bands and as row values in the data table on median age,  were 
+
+
+
+
+![Relevant data values in EXCEL]()
+
+2. The EXCEL file was imported into Tableau. The data type of each variable were checked and the data was prepared The data types of each variable were checked and the data
 
 # (e) Major observations revealed by the final product
 
