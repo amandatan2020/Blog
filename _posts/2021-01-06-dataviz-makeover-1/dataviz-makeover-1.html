@@ -1523,16 +1523,28 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found <a href="https://public.tableau.com/views/DataViz_Makeover_01_Tableau/Dashboard1?:language=en-GB&amp;:display_count=y&amp;:origin=viz_share_link">here</a>.</p>
 <h1 id="d-step-by-step-description-to-prepare-the-final-product">(d) Step-by-step description to prepare the final product</h1>
 <h2 id="verify-data-source-of-original-visualisation">1. Verify data source of original visualisation</h2>
-<p>Raw data for number of residents by age bands and median age from 2009 to 2019 were found in two separate Excel files, renamed to T7 and T2 respectively. It was noted that there are multiple worksheets in T7, showing the overall number of residents by age bands and by sex. <img src="data/T7_excel.jpg" alt="T7" /></p>
+<p>Raw data for number of residents by age bands and median age from 2009 to 2019 were found in two separate Excel files, renamed to T7 and T2 respectively. It was noted that there are multiple worksheets in T7, showing the overall number of residents by age bands and by sex.</p>
+<figure>
+<img src="data/T7_excel.jpg" alt="T7" /><figcaption aria-hidden="true">T7</figcaption>
+</figure>
 <figure>
 <img src="data/T2_excel.jpg" alt="T2" /><figcaption aria-hidden="true">T2</figcaption>
 </figure>
 <h2 id="import-relevant-data-tables-into-tableau">2. Import relevant data tables into Tableau</h2>
-<p>The two Excel files were imported as separate data sources, shown in the figure below. <img src="data/tableau_import1.jpg" alt="Importing Excel files into Tableau" /></p>
+<p>The two Excel files were imported as separate data sources, shown in the figure below.</p>
+<figure>
+<img src="data/tableau_import1.jpg" alt="Importing Excel files into Tableau" /><figcaption aria-hidden="true">Importing Excel files into Tableau</figcaption>
+</figure>
 <p>The table containing the overall number of residents is found in T7_T worksheet. Both tables T7_T and T2 were connected as table datas in Tableau.</p>
 <h2 id="prepare-and-clean-the-data">3. Prepare and clean the data</h2>
-<p>Many null values were detected by Tableau after import, as the data tables in the Excel files were formatted for easy reading and reporting. The figure below shows T7_T after importing in Tableau. <img src="data/T7_tab_raw.jpg" alt="Raw file in Tableau" /></p>
-<p>The Tableau function Data Interpreter was used for the initial data cleaning. The figures below show the resulting tables after using Data Interpreter. <img src="data/T7_tab_interpreter1.jpg" alt="T7_T after Tableau Data Interpreter" /></p>
+<p>Many null values were detected by Tableau after import, as the data tables in the Excel files were formatted for easy reading and reporting. The figure below shows T7_T after importing in Tableau.</p>
+<figure>
+<img src="data/T7_tab_raw.jpg" alt="Raw file in Tableau" /><figcaption aria-hidden="true">Raw file in Tableau</figcaption>
+</figure>
+<p>The Tableau function Data Interpreter was used for the initial data cleaning. The figures below show the resulting tables after using Data Interpreter.</p>
+<figure>
+<img src="data/T7_tab_interpreter1.jpg" alt="T7_T after Tableau Data Interpreter" /><figcaption aria-hidden="true">T7_T after Tableau Data Interpreter</figcaption>
+</figure>
 <figure>
 <img src="data/T2_tab_interpreter1.jpg" alt="T2 after Tableau Data Interpreter" /><figcaption aria-hidden="true">T2 after Tableau Data Interpreter</figcaption>
 </figure>
@@ -1576,47 +1588,94 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </tbody>
 </table>
 <p>Labour Force Participation Rate was retained in the data table as it was mentioned in the original visualisation. The use of the data would be explored in later steps.</p>
-<p>The figures below show the cleaned versions of the two data tables. <img src="data/T7_tab_cleaned.jpg" alt="Cleaned T7_T" /></p>
+<p>The figures below show the cleaned versions of the two data tables.</p>
+<figure>
+<img src="data/T7_tab_cleaned.jpg" alt="Cleaned T7_T" /><figcaption aria-hidden="true">Cleaned T7_T</figcaption>
+</figure>
 <figure>
 <img src="data/T2_tab_cleaned.jpg" alt="Cleaned T2" /><figcaption aria-hidden="true">Cleaned T2</figcaption>
 </figure>
 <h2 id="create-the-stacked-bar-graph">4. Create the stacked bar graph</h2>
-<p>The following steps were taken to create the stacked bar graph: - Using T7_T data, drag <em>Year</em> to “Columns”, <em>Age_band</em> and <em>No_residents</em> to “Rows”. - Click on “Show Me” and select the stacked bar chart option. <img src="data/create1.jpg" alt="Selecting stacked bar chart option under Show Me" /></p>
+<p>The following steps were taken to create the stacked bar graph: - Using T7_T data, drag <em>Year</em> to “Columns”, <em>Age_band</em> and <em>No_residents</em> to “Rows”. - Click on “Show Me” and select the stacked bar chart option.</p>
+<figure>
+<img src="data/create1.jpg" alt="Selecting stacked bar chart option under Show Me" /><figcaption aria-hidden="true">Selecting stacked bar chart option under <em>Show Me</em></figcaption>
+</figure>
 <ul>
-<li>Under <em>SUM(No_residents)</em> dropdown list, select “Quick Table Calculations” - “Percent of Total”, and under the same dropdown list, select “Compute Using” - “Age_band”. <img src="data/create2.1.jpg" alt="Adding Quick Table Calculations using Percent of Total" /></li>
+<li>Under <em>SUM(No_residents)</em> dropdown list, select “Quick Table Calculations” - “Percent of Total”, and under the same dropdown list, select “Compute Using” - “Age_band”.</li>
 </ul>
+<figure>
+<img src="data/create2.1.jpg" alt="Adding Quick Table Calculations using Percent of Total" /><figcaption aria-hidden="true">Adding <em>Quick Table Calculations</em> using <em>Percent of Total</em></figcaption>
+</figure>
 <figure>
 <img src="data/create2.2.jpg" alt="Changing the calculation to be based on Age_band" /><figcaption aria-hidden="true">Changing the calculation to be based on <em>Age_band</em></figcaption>
 </figure>
 <ul>
-<li><p>At the legend, select “15 - 19” and “20 - 24”, right-click and select “Group”. A new measure <em>Age_band (group)</em> appears under the data list. <img src="data/create3.0.jpg" alt="Creating a group from the legend card" /></p></li>
-<li><p>Right-click the measure <em>Age_band (group)</em> and select “Edit Group…”. <img src="data/create3.1.jpg" alt="Editing groups from the data list" /></p></li>
-<li><p>At the pop-up window, create two other groups for ages between 25 to 54 and 55 and above. <img src="data/create3.2.jpg" alt="Creating groups for Age_band" /></p></li>
-<li><p>Rename the groups created to reflect the start and end ages.</p></li>
-<li><p>Sort the <em>Age_band (group)</em> in descending order, as human perception of increasing trend is from down to up. <img src="data/create4.1.jpg" alt="Sorting the Age_band (group) in descending order" /></p></li>
+<li>At the legend, select “15 - 19” and “20 - 24”, right-click and select “Group”. A new measure <em>Age_band (group)</em> appears under the data list.</li>
 </ul>
+<figure>
+<img src="data/create3.0.jpg" alt="Creating a group from the legend card" /><figcaption aria-hidden="true">Creating a group from the legend card</figcaption>
+</figure>
+<ul>
+<li>Right-click the measure <em>Age_band (group)</em> and select “Edit Group…”.</li>
+</ul>
+<figure>
+<img src="data/create3.1.jpg" alt="Editing groups from the data list" /><figcaption aria-hidden="true">Editing groups from the data list</figcaption>
+</figure>
+<ul>
+<li>At the pop-up window, create two other groups for ages between 25 to 54 and 55 and above.</li>
+</ul>
+<figure>
+<img src="data/create3.2.jpg" alt="Creating groups for Age_band" /><figcaption aria-hidden="true">Creating groups for <em>Age_band</em></figcaption>
+</figure>
+<ul>
+<li>Rename the groups created to reflect the start and end ages.</li>
+<li>Sort the <em>Age_band (group)</em> in descending order, as human perception of increasing trend is from down to up.</li>
+</ul>
+<figure>
+<img src="data/create4.1.jpg" alt="Sorting the Age_band (group) in descending order" /><figcaption aria-hidden="true">Sorting the <em>Age_band (group)</em> in descending order</figcaption>
+</figure>
 <h2 id="add-the-median-age-line-to-the-graph">5. Add the median age line to the graph</h2>
-<p>The following steps were taken to add the median age line to the stacked bar graph: - Go to “T2 (T2)” under the data list, select <em>Median Age (Years)</em> and drag to the right side of the graph. - Under Marks card, <em>SUM(Median Age (Years))</em> sub-card, change the display from “Bar” to “Line”. <img src="data/create5.1.jpg" alt="Median Age with original axis range" /></p>
+<p>The following steps were taken to add the median age line to the stacked bar graph: - Go to “T2 (T2)” under the data list, select <em>Median Age (Years)</em> and drag to the right side of the graph. - Under Marks card, <em>SUM(Median Age (Years))</em> sub-card, change the display from “Bar” to “Line”.</p>
+<figure>
+<img src="data/create5.1.jpg" alt="Median Age with original axis range" /><figcaption aria-hidden="true"><em>Median Age</em> with original axis range</figcaption>
+</figure>
 <ul>
 <li>Remove the <em>Age_band (group)</em> and <em>Measure Names</em> from the <em>SUM(Median Age (Years))</em> sub-card.</li>
-<li>Edit the axis and change the range to “Fixed” from 0 to 80. This is to bring the line down to within the 25 to 54 age band group to give a more accurate picture of the data. The number 80 was chosen arbitrary to represent the age of the oldest resident in the labour force, which does not fall far from the truth. <img src="data/create5.2.jpg" alt="Median Age with fixed axis range" /></li>
+<li>Edit the axis and change the range to “Fixed” from 0 to 80. This is to bring the line down to within the 25 to 54 age band group to give a more accurate picture of the data. The number 80 was chosen arbitrary to represent the age of the oldest resident in the labour force, which does not fall far from the truth.</li>
 </ul>
+<figure>
+<img src="data/create5.2.jpg" alt="Median Age with fixed axis range" /><figcaption aria-hidden="true"><em>Median Age</em> with fixed axis range</figcaption>
+</figure>
 <h2 id="add-meaning-to-the-graph">6. Add meaning to the graph</h2>
 <p>With the base graph, the next step would be to add meaning to the graph through aesthetics. The following changes are made in the Sheet view:</p>
 <ul>
-<li><p>The colour palette of the stacked bar graph was changed to show a single-colour gradient over the three groups, so that the shift in trend is more obvious. The darker end of the colour gradient is chosen to represent older age bands, so that the attention is brought to that group. <img src="data/create6.000.jpg" alt="After changing the colour palette of the stacked bar graph" /></p></li>
-<li><p>The colour of the <em>Median Age (Year)</em> line was edited and markers were added. However, as the markers for the line chart are too small (unable to change the size due to limitations in the software), the display was changed from “Line” to “Circle” instead. The overall effect is better when labels and trend line were added. <img src="data/create6.00.jpg" alt="Original line graph with markers and labels added" /></p></li>
+<li>The colour palette of the stacked bar graph was changed to show a single-colour gradient over the three groups, so that the shift in trend is more obvious. The darker end of the colour gradient is chosen to represent older age bands, so that the attention is brought to that group.</li>
 </ul>
+<figure>
+<img src="data/create6.000.jpg" alt="After changing the colour palette of the stacked bar graph" /><figcaption aria-hidden="true">After changing the colour palette of the stacked bar graph</figcaption>
+</figure>
+<ul>
+<li>The colour of the <em>Median Age (Year)</em> line was edited and markers were added. However, as the markers for the line chart are too small (unable to change the size due to limitations in the software), the display was changed from “Line” to “Circle” instead. The overall effect is better when labels and trend line were added.</li>
+</ul>
+<figure>
+<img src="data/create6.00.jpg" alt="Original line graph with markers and labels added" /><figcaption aria-hidden="true">Original line graph with markers and labels added</figcaption>
+</figure>
 <figure>
 <img src="data/create6.0.jpg" alt="Changing the shape to circles and adding a trend line" /><figcaption aria-hidden="true">Changing the shape to circles and adding a trend line</figcaption>
 </figure>
 <ul>
 <li>Titles and labels were edited for layman understanding.</li>
 <li>Data source and note on the summation of percentages were added as part of the graph caption.</li>
-<li>Annotation for points was added to highlight the increase and decline in share of residents for 55 and above and 25 to 54 groups respectively. Key words are in boldface and made larger to capture attention. As the Tableau annotation can only link to one point, another annotation for point was overlaid (with no fill and borders) to create an annotation that links to two points. <img src="data/create6.1.jpg" alt="Using empty annotation for point to create the second link" /></li>
+<li>Annotation for points was added to highlight the increase and decline in share of residents for 55 and above and 25 to 54 groups respectively. Key words are in boldface and made larger to capture attention. As the Tableau annotation can only link to one point, another annotation for point was overlaid (with no fill and borders) to create an annotation that links to two points.</li>
 </ul>
+<figure>
+<img src="data/create6.1.jpg" alt="Using empty annotation for point to create the second link" /><figcaption aria-hidden="true">Using empty annotation for point to create the second link</figcaption>
+</figure>
 <p>As the Sheet view of Tableau only catered for chart title, the title of the visualisation and lead-in statements were added to the visualisation using the Tableau Dashboard feature. The steps taken are as follows: - The size of the dashboard is kept at a fixed size of 800 x 600 (laptop browser). This is to ensure that the position of the annotations do not change when it automatically resizes the visualisation. - Title and a text object were added on the Dashboard view for the visualisation title and lead-in statement respectively. - The caption was - As the location of the legend was too near the top, a blank object was added to bring the legend closer to the part of the graph where the two age groups meet. - The caption created from the Sheet view was explicitly made to show on the Dashboard view.</p>
-<p>A screen capture of the final product in Tableau Dashboard is shown below. <img src="data/Final_product.jpg" alt="Final visualisation" /></p>
+<p>A screen capture of the final product in Tableau Dashboard is shown below.</p>
+<figure>
+<img src="data/Final_product.jpg" alt="Final visualisation" /><figcaption aria-hidden="true">Final visualisation</figcaption>
+</figure>
 <h1 id="e-major-observations-revealed-by-the-final-product">(e) Major observations revealed by the final product</h1>
 <p>The message of the visualisation is clearly shown from the title and a brief lead-in statement shares on the possible factors that caused the increase in older residents in the labour force. The annotations highlight key points revealed by the graph, which supports the message.</p>
 <p>Besides conveying the original intended message, other major observations can also be made from the final proposed visualisation:</p>

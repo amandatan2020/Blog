@@ -19,6 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # The Data Visualisation
+
 ![Source: Report: Labour Force in Singapore 2019, Ministry of Manpower](data/The_Data_Visualisation.jpg)
 
 # (a) Critique of current visualisation
@@ -74,6 +75,7 @@ The change in background colour allows the audience to identify different parts 
 There is good contrast between the line graph and table. However, the attention of the audience is drawn to the table due to its darker colours. The background colour of the table can be improved by using lighter shades.
 
 # (b) Proposed design
+
 ![Sketch of proposed design](data/proposed_sketch.jpg)
 
 The proposed design attempts to convey the message that there are more older residents in the labour force more visually, while upholding the visualisation principles and best practices. The advantages of the proposed design are as follows:
@@ -93,6 +95,7 @@ The proposed visualisation is designed using Tableau and uploaded on Tableau Pub
 ## 1. Verify data source of original visualisation
 
 Raw data for number of residents by age bands and median age from 2009 to 2019 were found in two separate Excel files, renamed to T7 and T2 respectively. It was noted that there are multiple worksheets in T7, showing the overall number of residents by age bands and by sex.
+
 ![T7](data/T7_excel.jpg) 
 
 ![T2](data/T2_excel.jpg)
@@ -100,6 +103,7 @@ Raw data for number of residents by age bands and median age from 2009 to 2019 w
 ## 2. Import relevant data tables into Tableau
 
 The two Excel files were imported as separate data sources, shown in the figure below.
+
 ![Importing Excel files into Tableau](data/tableau_import1.jpg)
 
 The table containing the overall number of residents is found in T7_T worksheet. Both tables T7_T and T2 were connected as table datas in Tableau.
@@ -107,9 +111,11 @@ The table containing the overall number of residents is found in T7_T worksheet.
 ## 3. Prepare and clean the data
 
 Many null values were detected by Tableau after import, as the data tables in the Excel files were formatted for easy reading and reporting. The figure below shows T7_T after importing in Tableau.
+
 ![Raw file in Tableau](data/T7_tab_raw.jpg)
 
 The Tableau function Data Interpreter was used for the initial data cleaning. The figures below show the resulting tables after using Data Interpreter.
+
 ![T7_T after Tableau Data Interpreter](data/T7_tab_interpreter1.jpg) 
 
 ![T2 after Tableau Data Interpreter](data/T2_tab_interpreter1.jpg)
@@ -128,6 +134,7 @@ Added filter to remove the Total across age bands (null values under *Age_band*)
 Labour Force Participation Rate was retained in the data table as it was mentioned in the original visualisation. The use of the data would be explored in later steps.
 
 The figures below show the cleaned versions of the two data tables.
+
 ![Cleaned T7_T](data/T7_tab_cleaned.jpg) 
 
 ![Cleaned T2](data/T2_tab_cleaned.jpg)
@@ -137,24 +144,30 @@ The figures below show the cleaned versions of the two data tables.
 The following steps were taken to create the stacked bar graph:
 - Using T7_T data, drag *Year* to "Columns", *Age_band* and *No_residents* to "Rows".
 - Click on "Show Me" and select the stacked bar chart option.
+
 ![Selecting stacked bar chart option under *Show Me*](data/create1.jpg)
 
 - Under *SUM(No_residents)* dropdown list, select "Quick Table Calculations" - "Percent of Total", and under the same dropdown list, select "Compute Using" - "Age_band".
+
 ![Adding *Quick Table Calculations* using *Percent of Total*](data/create2.1.jpg)
 
 ![Changing the calculation to be based on *Age_band*](data/create2.2.jpg)
 
 - At the legend, select "15 - 19" and "20 - 24", right-click and select "Group". A new measure *Age_band (group)* appears under the data list.
+
 ![Creating a group from the legend card](data/create3.0.jpg)
 
 - Right-click the measure *Age_band (group)* and select "Edit Group...".
+
 ![Editing groups from the data list](data/create3.1.jpg)
 
 - At the pop-up window, create two other groups for ages between 25 to 54 and 55 and above.
+
 ![Creating groups for *Age_band*](data/create3.2.jpg)
 
 - Rename the groups created to reflect the start and end ages.
 - Sort the *Age_band (group)* in descending order, as human perception of increasing trend is from down to up.
+
 ![Sorting the *Age_band (group)* in descending order](data/create4.1.jpg)
 
 ## 5. Add the median age line to the graph
@@ -162,10 +175,12 @@ The following steps were taken to create the stacked bar graph:
 The following steps were taken to add the median age line to the stacked bar graph:
 - Go to "T2 (T2)" under the data list, select *Median Age (Years)* and drag to the right side of the graph.
 - Under Marks card, *SUM(Median Age (Years))* sub-card, change the display from "Bar" to "Line".
+
 ![*Median Age* with original axis range](data/create5.1.jpg)
 
 - Remove the *Age_band (group)* and *Measure Names* from the *SUM(Median Age (Years))* sub-card.
 - Edit the axis and change the range to "Fixed" from 0 to 80. This is to bring the line down to within the 25 to 54 age band group to give a more accurate picture of the data. The number 80 was chosen arbitrary to represent the age of the oldest resident in the labour force, which does not fall far from the truth.
+
 ![*Median Age* with fixed axis range](data/create5.2.jpg)
 
 ## 6. Add meaning to the graph
@@ -173,9 +188,11 @@ The following steps were taken to add the median age line to the stacked bar gra
 With the base graph, the next step would be to add meaning to the graph through aesthetics. The following changes are made in the Sheet view:
 
 - The colour palette of the stacked bar graph was changed to show a single-colour gradient over the three groups, so that the shift in trend is more obvious. The darker end of the colour gradient is chosen to represent older age bands, so that the attention is brought to that group.
+
 ![After changing the colour palette of the stacked bar graph](data/create6.000.jpg)
 
 - The colour of the *Median Age (Year)* line was edited and markers were added. However, as the markers for the line chart are too small (unable to change the size due to limitations in the software), the display was changed from "Line" to "Circle" instead. The overall effect is better when labels and trend line were added.
+
 ![Original line graph with markers and labels added](data/create6.00.jpg)
 
 ![Changing the shape to circles and adding a trend line](data/create6.0.jpg)
@@ -183,6 +200,7 @@ With the base graph, the next step would be to add meaning to the graph through 
 - Titles and labels were edited for layman understanding.
 - Data source and note on the summation of percentages were added as part of the graph caption.
 - Annotation for points was added to highlight the increase and decline in share of residents for 55 and above and 25 to 54 groups respectively. Key words are in boldface and made larger to capture attention. As the Tableau annotation can only link to one point, another annotation for point was overlaid (with no fill and borders) to create an annotation that links to two points.
+
 ![Using empty annotation for point to create the second link](data/create6.1.jpg)
 
 As the Sheet view of Tableau only catered for chart title, the title of the visualisation and lead-in statements were added to the visualisation using the Tableau Dashboard feature. The steps taken are as follows:
@@ -193,6 +211,7 @@ As the Sheet view of Tableau only catered for chart title, the title of the visu
 - The caption created from the Sheet view was explicitly made to show on the Dashboard view.
 
 A screen capture of the final product in Tableau Dashboard is shown below.
+
 ![Final visualisation](data/Final_product.jpg)
 
 # (e) Major observations revealed by the final product
