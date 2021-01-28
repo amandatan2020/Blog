@@ -88,7 +88,7 @@ The proposed design attempts to convey the message that there are more older res
 
 # (c) Final product of proposed visualisation
 
-The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found [here](https://public.tableau.com/views/DataViz_Makeover_01_Tableau/Dashboard1?:language=en-GB&:display_count=y&:origin=viz_share_link).
+The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found [here](https://public.tableau.com/views/DataViz_Makeover_01_Tableau/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link).
 
 # (d) Step-by-step description to prepare the final product
 
