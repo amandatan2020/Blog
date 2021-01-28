@@ -204,7 +204,7 @@ With the base graph, the next step would be to add meaning to the graph through 
 ![Using empty annotation for point to create the second link](data/create6.1.jpg)
 
 As the Sheet view of Tableau only catered for chart title, the title of the visualisation and lead-in statements were added to the visualisation using the Tableau Dashboard feature. The steps taken are as follows:
-- The size of the dashboard is kept at a fixed size of 800 x 600 (laptop browser). This is to ensure that the position of the annotations do not change when it automatically resizes the visualisation.
+- The size of the dashboard is kept at a fixed size of 1024 x 768 (full screen). This is to ensure that the position of the annotations do not change when it automatically resizes the visualisation.
 - Title and a text object were added on the Dashboard view for the visualisation title and lead-in statement respectively.
 - The caption was 
 - As the location of the legend was too near the top, a blank object was added to bring the legend closer to the part of the graph where the two age groups meet.
