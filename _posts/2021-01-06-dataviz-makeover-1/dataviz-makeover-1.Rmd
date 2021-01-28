@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # The Data Visualisation
-![Source: Report: Labour Force in Singapore 2019, Ministry of Manpower](C:/Users/amand/Documents/SMU MITB/ISSS608 Visual Analytics/Blog/_posts/2021-01-06-dataviz-makeover-1/data/The_Data_Visualisation.jpg)
+![Source: Report: Labour Force in Singapore 2019, Ministry of Manpower](data/The_Data_Visualisation.jpg)
 
 # (a) Critique of current visualisation
 
@@ -75,36 +75,117 @@ There is good contrast between the line graph and table. However, the attention 
 
 # (b) Proposed design
 
-![Sketch of proposed design]()
+![Sketch of proposed design](data/proposed_sketch.jpg)
+
 The proposed design attempts to convey the message that there are more older residents in the labour force more visually, while upholding the visualisation principles and best practices. The advantages of the proposed design are as follows:
 
-- Information in the original lead-in statements are represented graphically as much as possible, thus reducing the amount of text in the lead-in statements
-- Time factor is plotted on the x-axis with the appropriate use of stacked bar charts to visually differentiate between age bands
-- As there are 12 age bands, logical grouping of age bands according to Singapore's context helps to reduce the complexity of the visualisation and provide relevance to the Singaporean audience
-- Labour force age patterns for the entire time period from 2009 and 2019 are shown, providing a more complete story behind the data
-- Use of annotation to highlight and accentuate the intended message
+- Information in the original lead-in statements are represented graphically as much as possible, thus reducing the amount of text in the lead-in statements.
+- Time factor is plotted on the x-axis with the appropriate use of stacked bar charts to visually differentiate between age bands.
+- As there are 12 age bands, logical grouping of age bands according to Singapore's context helps to reduce the complexity of the visualisation and provide relevance to the Singaporean audience.
+- Labour force age patterns for the entire time period from 2009 and 2019 are shown, providing a more complete story behind the data.
+- Use of annotation to highlight and accentuate the intended message.
 
 # (c) Final product of proposed visualisation
 
-The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found [here]().
+The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found [here](https://public.tableau.com/views/DataViz_Makeover_01_Tableau/Dashboard1?:language=en-GB&:display_count=y&:origin=viz_share_link).
 
 # (d) Step-by-step description to prepare the final product
 
-1. Verify data source of original visualisation
-    - Raw data for number of residents by age bands and median age from 2009 to 2019 were found in two separate Excel files T7 and T2 respectively
-    - There are multiple worksheets in T7, showing the overall number of residents by age bands and by sex
-2. Import relevant data tables into Tableau
-    - The two Excel files were imported as separate data sources
-    - Many null values were detected by Tableau after importing, as the data tables in the Excel files were formatted for easy reading and reporting
-    - The Tableau function Data Interpreter was used for the initial cleaning to remove the null values
-    - As the years were expressed as column headers in the data table on number of residents by age bands and as row values in the data table on median age,  were 
+## 1. Verify data source of original visualisation
 
+Raw data for number of residents by age bands and median age from 2009 to 2019 were found in two separate Excel files, renamed to T7 and T2 respectively. It was noted that there are multiple worksheets in T7, showing the overall number of residents by age bands and by sex.
+    
+![T7](data/T7_excel.jpg) ![T2](data/T2_excel.jpg)
+    
+## 2. Import relevant data tables into Tableau
 
+The two Excel files were imported as separate data sources, shown in the figure below.
+![Importing Excel files into Tableau](data/tableau_import1.jpg)
 
+The table containing the overall number of residents is found in T7_T worksheet. Both tables T7_T and T2 were connected as table datas in Tableau.
 
-![Relevant data values in EXCEL]()
+## 3. Prepare and clean the data
 
-2. The EXCEL file was imported into Tableau. The data type of each variable were checked and the data was prepared The data types of each variable were checked and the data
+Many null values were detected by Tableau after import, as the data tables in the Excel files were formatted for easy reading and reporting. The figure below shows T7_T after importing in Tableau.
+![Raw file in Tableau](data/T7_tab_raw.jpg)
+
+The Tableau function Data Interpreter was used for the initial data cleaning. The figures below show the resulting tables after using Data Interpreter.
+![T7_T after Tableau Data Interpreter](data/T7_tab_interpreter1.jpg) ![T2 after Tableau Data Interpreter](data/T2_tab_interpreter1.jpg)
+
+The table below shows the changes made to the respective tables:
+
+For T7_T | For T2
+---------|---------
+Hid column *F1*                                | Hid all other columns except for *Labour Force Participation Rate (%)* and *Median Age of Labour Force (Years)*
+Renamed *Age (Years) 2* to *Age_band*          | Renamed *June* to *Year* and changed the data type to "Date"
+Pivoted columns containing years               | Renamed *Labour Force Participation Rate (%)* to *LFPR (%)*
+Renamed *Pivot Field Names* to *Year* and changed the data type to "Date" | Renamed *Median Age of Labour Force (Years)* to *Median Age (Years)*
+Renamed *Pivot Field Values* to *No_residents* |Added filter to remove empty rows
+Added filter to remove the Total across age bands (null values under *Age_band*) |
+
+Labour Force Participation Rate was retained in the data table as it was mentioned in the original visualisation. The use of the data would be explored in later steps.
+
+The figures below show the cleaned versions of the two data tables.
+![Cleaned T7_T](data/T7_tab_cleaned.jpg) ![Cleaned T2](data/T2_tab_cleaned.jpg)
+
+## 4. Create the stacked bar graph
+
+The following steps were taken to create the stacked bar graph:
+- Using T7_T data, drag *Year* to "Columns", *Age_band* and *No_residents* to "Rows".
+- Click on "Show Me" and select the stacked bar chart option.
+
+![Selecting stacked bar chart option under *Show Me*](data/create1.jpg)
+
+- Under *SUM(No_residents)* dropdown list, select "Quick Table Calculations" - "Percent of Total", and under the same dropdown list, select "Compute Using" - "Age_band".
+
+![Adding *Quick Table Calculations* using *Percent of Total*](data/create2.1.jpg)
+![Changing the calculation to be based on *Age_band*](data/create2.2.jpg)
+
+- At the legend, select "15 - 19" and "20 - 24", right-click and select "Group". A new measure *Age_band (group)* appears under the data list.
+
+![Creating a group from the legend card](data/create3.0.jpg)
+
+- Right-click the measure *Age_band (group)* and select "Edit Group...".
+
+![Editing groups from the data list](data/create3.1.jpg)
+
+- At the pop-up window, create two other groups for ages between 25 to 54 and 55 and above.
+
+![Creating groups for *Age_band*](data/create3.2.jpg)
+
+- Rename the groups created to reflect the start and end ages.
+- Sort the *Age_band (group)* in descending order, as human perception of increasing trend is from down to up.
+
+![Sorting the *Age_band (group)* in descending order](data/create4.1.jpg)
+
+## 5. Add the median age line to the graph
+
+The following steps were taken to add the median age line to the stacked bar graph:
+- Go to "T2 (T2)" under the data list, select *Median Age (Years)* and drag to the right side of the graph.
+- Under Marks card, *SUM(Median Age (Years))* sub-card, change the display from "Bar" to "Line".
+
+![*Median Age* with original axis range](data/create5.1.jpg)
+
+- Remove the *Age_band (group)* and *Measure Names* from the *SUM(Median Age (Years))* sub-card.
+- Edit the axis and change the range to "Fixed" from 0 to 80. This is to bring the line down to within the 25 to 54 age band group to give a more accurate picture of the data. The number 80 was chosen arbitrary to represent the age of the oldest resident in the labour force, which does not fall far from the truth.
+
+![*Median Age* with fixed axis range](data/create5.2.jpg)
+
+## 6. Adding meaning to the graph
+
+With the base graph, the next step would be to add meaning to the graph through aesthetics. The following changes are made in the Sheet view:
+
+- The colour palette of the stacked bar graph was changed to show a single-colour gradient over the three groups, so that the shift in trend is more obvious. The darker end of the colour gradient is chosen to represent older age bands, so that the attention is brought to that group.
+- The colour of the *Median Age (Year)* line was edited and markers were added. However, as the markers for the line chart are too small (unable to change the size due to limitations in the software), the display was changed from "Line" to "Circle" instead. The overall effect is better when labels and trend line were added.
+- Titles and labels were edited for layman understanding.
+- Data source and note on the summation of percentages were added as part of the graph caption.
+- Annotation was added to highlight the increase and decline in share of residents for 55 and above and 25 to 54 groups respectively. Key words are in boldface and made larger to capture attention.
+
+As the Sheet view of Tableau only catered for chart title, the title of the visualisation and lead-in statements were added to the visualisation using the Tableau Dashboard feature.
+
+A screen capture of the final product in Tableau Dashboard is shown below.
+
+![Final visualisation](data/Final_product.jpg)
 
 # (e) Major observations revealed by the final product
 
