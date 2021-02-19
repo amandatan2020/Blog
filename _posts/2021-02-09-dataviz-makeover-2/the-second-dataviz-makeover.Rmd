@@ -132,7 +132,7 @@ In addition, the x-axis lines and grid lines are faint and are hardly visible in
 
 The proposed design consists of a number of components that attempt to address the issues highlighted above:
 
-* **Visualiation title and lead-in statements**: highlight what the visualisation is about and provide some background information on the data e.g. period visualisation is based on
+* **Visualiation title and lead-in statements**: highlight what the visualisation is about and provide some background information on the data and context
 * **Interactive components**, namely being able to select parameters such as country, age, sex, household size, number of children in household, and employment status: allow exploration at the overall level while giving some flexibility to view the data of specific groups. Full range of countries to be provided, and to pre-set the country parameter to key countries so as not to over-crowd the initial visualisation
 * **Top-and-bottom placement of graphs**: reduce the tendency to visually compare the two graphs
 * **Legend placed between graphs**: reduce the distance of the legend from both graphs
@@ -196,7 +196,7 @@ The columns are then merged in Tableau and the data is exported to csv file, wit
 12. Rename the merged column created to "Employment Status"
 13. At the menu bar, select Data/Export Data to CSV and click on the file name
 
-![](guide/2.5.jpg)
+![](guide/2.5.jpg){width=80%}
 
 14. Save the file
 
@@ -232,7 +232,7 @@ The data values under each field were checked through using the "Alias" option. 
 
 For the vac fields, the extent of agreement and disagreement are explicitly spelt out.
 
-![](guide/3.6.jpg)
+![](guide/3.6.jpg){width=80%}
 
 The figure below shows the final table after data preparation.
 
@@ -260,7 +260,7 @@ The following steps are taken to create the calculated fields:
 
 1. Under Data tab, click on the black dropdown arrow near the search bar and select "Create Calculated Field..."
 
-![](guide/4.1.jpg)
+![](guide/4.1.jpg){width=60%}
 
 2. Enter the field name and formula as shown below.
 
@@ -276,7 +276,7 @@ The next step would be to create the diverging stacked bar chart!
 
 2. Add "vac_1" to Details in the Marks card
 
-![](guide/4.4.jpg)
+![](guide/4.4.jpg){width=60%}
 
 3. Under Columns, right-click "Gantt Percent", go to Compute Using and select "vac_1"
 
@@ -284,31 +284,31 @@ The next step would be to create the diverging stacked bar chart!
 
 4. Under the Marks card, change the chart type to "Gantt Bar"
 
-![](guide/4.6.jpg)
+![](guide/4.6.jpg){width=50%}
 
 5. Click and drag "vac_1" into Colour in the Marks card
 
-![](guide/4.7.jpg)
+![](guide/4.7.jpg){width=50%}
 
 6. Click and drag "Percentage" into Size in the Marks card
 
-![](guide/4.8.jpg)
+![](guide/4.8.jpg){width=70%}
 
 7. Click and drag "vac_1" into the Filters card
 
-![](guide/4.9.jpg)
+![](guide/4.9.jpg){width=70%}
 
 8. In the windowlet, deselect Null and close the windowlet
 
-![](guide/4.10.jpg)
+![](guide/4.10.jpg){width=80%}
 
 9. At the legend, click on the black dropdown arrow and select "Edit Colors..." to change the colour palette. The Traffic Light palette is chosen to show that agreement in a positive tone (green), disagreement in a negative tone (red), and neutrality in paler colour (yellow). The strength of the response i.e. "strongly" is reflected by the intensity of the colour.
 
-![](guide/4.12.jpg)
+![](guide/4.12.jpg){width=70%}
 
 10. At the legend, click on the black dropdown arrow and select "Sort..."
 
-![](guide/4.11.jpg)
+![](guide/4.11.jpg){width=50%}
 
 11. In the windowlet, select "Descending" to place the negative responses on the left and positive responses on the right
 
@@ -331,7 +331,7 @@ The following steps are taken to add the filters:
 
 1. Right-click "Age" and select "Convert to Dimension"
 
-![](guide/4.14.jpg)
+![](guide/4.14.jpg){width=70%}
 
 2. Click and drag the above mentioned dimensions to the Filters card
     * For Age, a windowlet will appear. Click all and select "Ok"
@@ -371,7 +371,7 @@ The following steps are taken to create the graph for the tooltips:
 
 2. Click on "Show Me" and select the "stacked bars"
 
-![](guide/5.1.jpg)
+![](guide/5.1.jpg){width=50%}
 
 3. Click on the icon shown below to orientate the stacked bar chart horizontally
 
@@ -379,19 +379,19 @@ The following steps are taken to create the graph for the tooltips:
 
 4. Click and drag "vac2_1" into the filters and deselect Null values
 
-![](guide/5.3.jpg)
+![](guide/5.3.jpg){width=70%}
 
 5. Right-click on the x-axis to edit the axis. Remove the title
 
-![](guide/5.4.jpg)
+![](guide/5.4.jpg){width=70%}
 
 6. Go to the "Tick Marks" tab and select "None" under Major Tick Marks. Close the windowlet
 
-![](guide/5.5.jpg)
+![](guide/5.5.jpg){width=70%}
 
 7. At the legend on the right, click on the dropdown arrow to edit colours, similar to the diverging stacked bar chart.
 
-![](guide/5.6.jpg)
+![](guide/5.6.jpg){width=70%}
 
 8. Add in the survey question as the title of the sheet and resize the graph to be able to fit in the tooltip. Right-click the x-axis and unselect "Show Header"
 
@@ -417,7 +417,7 @@ The following steps are taken to create the parameters:
 
 1. At the Data tab on the left panel, click on the black dropdown arrow and select "Create Parameter..."
 
-![](guide/6.0.jpg)
+![](guide/6.0.jpg){width=80%}
 
 2. For "Response", enter the values shown in the figure below (note that the values can be added from dimensions):
 
@@ -425,7 +425,7 @@ The following steps are taken to create the parameters:
 
 3. For "Confidence Level", enter the values shown in the figure below:
 
-![](guide/6.2.jpg)
+![](guide/6.2.jpg){width=80%}
 
 The following calculated fields need to be created for the error bar:
 
@@ -456,23 +456,23 @@ Next, the error bar on bar chart is created taking the following steps:
 
 5. In the Measure Values card, change the chart type to "Line"
 
-![](guide/6.6.jpg)
+![](guide/6.6.jpg){width=50%}
 
 6. Click and drag "Measure Names" to "Path
 
-![](guide/6.7.jpg)
+![](guide/6.7.jpg){width=50%}
 
 7. Click and drag "vac_1" to Filters, and select all except Null
 
-![](guide/6.8.jpg)
+![](guide/6.8.jpg){width=50%}
 
 8. To show the parameters, right-click on the parameter names and select "Show Parameter". Change the parameter options to "Single Value List"
 
-![](guide/6.9.jpg)
+![](guide/6.9.jpg){width=50%}
 
 9. To align the colour of the bar chart to the same colour palette used in the diverging stacked bar chart, click and drag "Response" to Colour in the AGG(Prop_Response) card.
 
-![](guide/6.10.jpg)
+![](guide/6.10.jpg){width=50%}
 
 10. To change the colours, toggle between the response values in the Parameter card and the legend. Use the same traffic light colour palette 
 
@@ -487,8 +487,49 @@ The final error bar on bar chart is shown below.
 
 ![](guide/6.13.jpg)
 
-### 7. 
-### 8. 
+### 7. Create the dashboard
+
+Go to the dashboard sheet by clicking on "New Dashboard" sheet at the bottom of Tableau. Under the Dashboard tab, go to Size and select "Automatic" from the dropdown list.
+
+![](guide/7.0.jpg)
+
+Add the dashboard title by clicking on checkbox "Show dashboard title" near the left bottom of the workspace. Click and drag a text object to the area under the dashboard title, as shown below. A windowlet will appear and enter the lead-in statements. A placeholder is shown in the subsequent figures.
+
+![](guide/7.1.jpg)
+
+Next, click and drag the sheet "DivergingStacked" to the area below the lead-in statement.
+
+![](guide/7.2.jpg)
+
+Then, click and drag the sheet "ErrorBar" to the space below the diverging stacked bar chart.
+
+![](guide/7.3.jpg)
+
+Edit the necessary such as title and lead-in statements, and rearrange the tiles to fit the elements nicely. Add in blank objects where needed. 
+
+As the graphs have a scrollbar within the tiles, it does not aid the audience in maneuvering. At each of the graph tiles, click on the dropdown arrow, go to Fit and select "Fit Height".
+
+![](guide/7.4.jpg)
+
+The blueprint of the final dashboard is as shown below, including the blank spaces that were added in.
+
+![](guide/7.5.jpg)
 
 # (e) Major observations revealed by the final product
 
+### Fear of side effects of the Covid-19 vaccine
+
+From the diverging stacked bar chart, it is observed that people who strongly disagree and disagree to taking the Covid-19 vaccine if they have the choice now are generally worried about the side effects of the vaccine. On the other hand, people who strongly agree and agree to taking the Covid-19 vaccine are less concerned on the vaccine's side effects. 
+
+In addition, among those who disagrees, their stand on not taking the vaccine actually dilutes over time. Looking at the response on whether they agree to take the vaccine one year from now, there are some who still strongly disagrees, but we can observe that there is more ambiguity to the response overall. 
+
+Should governments and public agencies want to encourage the public to be vaccinated, a possible strategy would be to target these groups' concerns, which may have a good chance to change their minds.
+
+### Higher uncertainty for less opinionated responses
+
+
+
+
+### 
+
+Generally people who strongly agree with the statement that they would get the Covid-19 vaccine are less worried about the side effects of the vaccine. This pattern is largely observed across the countries. Of those who 
