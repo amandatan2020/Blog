@@ -59,9 +59,13 @@ vac_3|If a Covid-19 vaccine becomes available to me a year from now, I definitel
 
 For someone who knows the survey and the questions asked, it is not clear which question's data is the visualisation based on. Even if the small print "*Vac 1*" in the legend is noted, it will require some work on the part of the audience to try to remember or to find out what it means, which defeats the purpose of visualisations in facilitating analytical reasoning. 
 
-### 5. Only about half of the countries surveyed are shown in the visualisation
+### 5. Selection of countries not explained in the visualisation
 
-The creator selected 14 out of the 29 countries surveyed to include in the visualisation. The reasons for the choice of countries are not included in the visualisation and may mislead the audience to think that the 14 countries shown are either the only countries that were surveyed or the top-14 countries that have the highest percentage of strongly agreed to vaccination. In addition, prominent countries like China and United States were missing in the visualisation.
+The creator selected 14 out of the 30 countries surveyed to include in the visualisation. The reasons for the choice of countries are not included in the visualisation and may mislead the audience to think that the 14 countries shown are either the only countries that were surveyed or the top-14 countries that have the highest percentage of strongly agreed to vaccination. It was also noted that prominent countries like China and United States were missing in the visualisation.
+
+Upon further investigation of the dataset, it was found that the remaining countries (Brazil, China, Hong Kong, India, Indonesia, Malaysia, Mexico, Philippines, Saudi Arabia, Taiwan, Thailand, United Arab Emirates, United States and Vietnam) do not have the vaccination fields in the dataset, and the data from Israel is recently added from 29/01/2021 onwards. These were likely the reasons for the exclusion in the visualisation, which the creator did not attempt to explain to provide clarity.
+
+In addition, Spain is excluded in the visualisation when valid data is available.
 
 ### 6. Good use of chart type and chart orientation
 
@@ -145,9 +149,346 @@ The proposed visualisation is designed using Tableau and uploaded on Tableau Pub
 
 # (d) Step-by-step description to prepare the final product
 
-1. Place all relevant csv files into one folder
+### 1. Place all relevant csv files into one folder
 
-2. 
+Extract all zipped files and place all countries' csv files into the same folder. For countries with missing vaccination fields, they are placed in a sub-folder "missing_vac".
+
+![](guide/1.0.jpg)
+
+### 2. Prepare the data tables
+
+For each file with valid vaccination fields, delete all other fields except for "RecordNo", "endtime", "gender", "age", "household_size", "household_children", "employment_status", "vac_1", "vac2_1", "vac2_2", "vac2_3", "vac2_6" and "vac_3". The order of the fields are aligned in all the files.
+
+![](guide/2.0.jpg)
+
+There is no household_size, household_children and employment_status in the Israel dataset. The three columns were added in for alignment with the rest of the files.
+
+The employment_status are coded differently for four countries (Denmark, Finland, Norway and Sweden). Instead of one field, there are seven fields for each employment status value in binary (Yes/No).
+
+![](guide/2.1.jpg)
+
+Recoding is done in Excel to replace "Yes" values under each employment_status column to reflect the employment status value to align with the other files. The mapping is as shown:
+
+![](guide/2.2.jpg)
+
+For each file, the steps taken in Excel are:
+
+1. Select entire column "employment_status_1"
+2. Press "Ctrl" + "F" to open the Find and Replace windowlet
+3. Click on "Replace" tab
+4. Under "Find what:" and "Replace with:", enter "Yes" and "Full time employment" respectively
+5. Click "Replace All"
+
+![](guide/2.3.jpg)
+
+6. Repeat steps 1-5 to replace "No" values with blank
+7. Repeat steps 1-6 for the remaining six columns
+8. Save and close the file
+
+The columns are then merged in Tableau and the data is exported to csv file, with the following steps for each file:
+
+9. Open the file in Tableau
+10. Select the columns to be merged
+11. Right-click and select "Merge Mismatch Fields"
+
+![](guide/2.4.jpg)
+
+12. Rename the merged column created to "Employment Status"
+13. At the menu bar, select Data/Export Data to CSV and click on the file name
+
+![](guide/2.5.jpg)
+
+14. Save the file
+
+As the order of the columns and field names in the exported data from Tableau changed, the columns are reordered and renamed in Excel to be the same as the other files.
+
+### 3. Import data tables into Tableau
+
+Open Tableau and click-and-drag (any) one file into Tableau.
+
+![](guide/3.0.jpg)
+
+Tableau will automatically show all the other files in the same folder under "Files".
+
+![](guide/3.1.jpg)
+
+Remove "australia.csv" from the workspace by clicking and dragging it out of the workspace.
+
+Under "Files", select all the relevant files and drag them into the workspace to combine all the data in the different files into one table.
+
+![](guide/3.2.jpg)
+
+After combining, some repeated fields are noted, as indicated in the black box below.
+
+![](guide/3.3.jpg)
+
+The "Merge Mismatch Field" is used to combine similar fields together. After merging, the fields were reviewed and renamed accordingly. For "Table Name", it was renamed to "Country", and aliases were used to rename the filenames to country names.
+
+![Right-click to select "Alias"](guide/3.4.jpg){width=50%}
+
+![Editing the aliases](guide/3.5.jpg){width=80%}
+
+The data values under each field were checked through using the "Alias" option. It was noted that there were some issues with the Israel dataset after the union was made. However, as the issue cannot be resolved, Israel was removed from the analysis and visualisation.
+
+For the vac fields, the extent of agreement and disagreement are explicitly spelt out.
+
+![](guide/3.6.jpg)
+
+The figure below shows the final table after data preparation.
+
+![](guide/3.7.jpg)
+
+### 4. Create the diverging stacked bar chart
+
+To create the graphs, move to Sheet 1 at the bottom of Tableau.
+
+![](guide/4.0.jpg)
+
+Several calculated fields need to be created, as shown in the table below.
+
+Field name | Formula
+-----------|-------------
+Number of Records | 1
+Total Count | TOTAL(SUM([Number of Records]))
+Count Negative | IF [vac_1]="5 - Strongly disagree" THEN 1 ELSEIF [vac_1]="4" THEN 1 ELSEIF [vac_1]="3" THEN 0.5 ELSE 0 END
+Total Count Negative | TOTAL(SUM([Count Negative]))
+Percentage | SUM([Number of Records])/[Total Count]
+Gantt Start | -[Total Count negative]/[Total Count]
+Gantt Percent | PREVIOUS_VALUE([Gantt Start])+ZN(LOOKUP([Percentage],-1))
+
+The following steps are taken to create the calculated fields:
+
+1. Under Data tab, click on the black dropdown arrow near the search bar and select "Create Calculated Field..."
+
+![](guide/4.1.jpg)
+
+2. Enter the field name and formula as shown below.
+
+![](guide/4.2.jpg)
+
+3. Repeat steps 1-2 for each calculated field
+
+The next step would be to create the diverging stacked bar chart!
+
+1. Add "Gantt Percent" and "Country" into Columns and Rows respectively
+
+![](guide/4.3.jpg)
+
+2. Add "vac_1" to Details in the Marks card
+
+![](guide/4.4.jpg)
+
+3. Under Columns, right-click "Gantt Percent", go to Compute Using and select "vac_1"
+
+![](guide/4.5.jpg)
+
+4. Under the Marks card, change the chart type to "Gantt Bar"
+
+![](guide/4.6.jpg)
+
+5. Click and drag "vac_1" into Colour in the Marks card
+
+![](guide/4.7.jpg)
+
+6. Click and drag "Percentage" into Size in the Marks card
+
+![](guide/4.8.jpg)
+
+7. Click and drag "vac_1" into the Filters card
+
+![](guide/4.9.jpg)
+
+8. In the windowlet, deselect Null and close the windowlet
+
+![](guide/4.10.jpg)
+
+9. At the legend, click on the black dropdown arrow and select "Edit Colors..." to change the colour palette. The Traffic Light palette is chosen to show that agreement in a positive tone (green), disagreement in a negative tone (red), and neutrality in paler colour (yellow). The strength of the response i.e. "strongly" is reflected by the intensity of the colour.
+
+![](guide/4.12.jpg)
+
+10. At the legend, click on the black dropdown arrow and select "Sort..."
+
+![](guide/4.11.jpg)
+
+11. In the windowlet, select "Descending" to place the negative responses on the left and positive responses on the right
+
+![](guide/4.13.jpg)
+
+12. Right-click on the x-axis and deselect "Show Header" - x-axis removed as it would not be useful due to the negative figures. Any information on the values will be added in as a tooltip (covered in subsequent steps)
+
+The base diverging stacked bar chart is now complete! The next step will be to add in the interactive features using the filters. The following are added as filters:
+
+* Gender
+* Age
+* Employment Status
+* Household Size
+* Household Children
+* Month
+
+In the earlier sketch, country was added as a filter as the initial thought was that there were many countries not reflected. However, due to data limitations, only 14 countries are shown, which is similar to the original visualisation.
+
+The following steps are taken to add the filters:
+
+1. Right-click "Age" and select "Convert to Dimension"
+
+![](guide/4.14.jpg)
+
+2. Click and drag the above mentioned dimensions to the Filters card
+    * For Age, a windowlet will appear. Click all and select "Ok"
+    * Right-click "Age" and select "Continuous"
+    ![](guide/4.15.jpg)
+
+    * A windowlet will appear. Click "OK"
+    
+    ![](guide/4.16.jpg)
+
+2. For each filter, right-click and select "Show Filter"
+
+3. Re-arrange the filter cards by dragging it around the workspace
+
+4. The filter cards were renamed for simplicity and changes were made to the filter controls by right-clicking the black dropdown arrow for each filter card
+
+Filter | Control
+-------|--------
+Gender | Multiple values (list)
+Age | Range of values
+Employment Status | Multiple values (dropdown)
+Household Size | Multiple values (dropdown)
+Household Children | Multiple values (dropdown)
+Month | Single value (list)
+
+The last step would be to beautify the graph! A chart title is added and the legend was also shifted to the bottom of the graph and renamed to "Response". The figure below shows the final graph.
+
+![](guide/4.17.jpg)
+
+### 5. Create the graphs for the tooltip
+
+The following steps are taken to create the graph for the tooltips:
+
+1. In a new sheet, click and drag "vac2_1" into Rows and "Number of Records" into Columns
+
+![](guide/5.0.jpg)
+
+2. Click on "Show Me" and select the "stacked bars"
+
+![](guide/5.1.jpg)
+
+3. Click on the icon shown below to orientate the stacked bar chart horizontally
+
+![](guide/5.2.jpg)
+
+4. Click and drag "vac2_1" into the filters and deselect Null values
+
+![](guide/5.3.jpg)
+
+5. Right-click on the x-axis to edit the axis. Remove the title
+
+![](guide/5.4.jpg)
+
+6. Go to the "Tick Marks" tab and select "None" under Major Tick Marks. Close the windowlet
+
+![](guide/5.5.jpg)
+
+7. At the legend on the right, click on the dropdown arrow to edit colours, similar to the diverging stacked bar chart.
+
+![](guide/5.6.jpg)
+
+8. Add in the survey question as the title of the sheet and resize the graph to be able to fit in the tooltip. Right-click the x-axis and unselect "Show Header"
+
+The above steps are repeated for vac2_2, vac2_3, vac2_6 and vac_3. As a shortcut, the sheet for vac2_1 was duplicated, and the sheet title and variables were updated accordingly.
+
+Back at the diverging stacked bar chart sheet, select "Tooltip" under the Marks card. In the windowlet, enter in the survey response and click on Insert/Sheets and select the corresponding graphs. Resize the font accordingly to fit into the tooltip box.
+
+![](guide/5.8.jpg)
+
+Other useful information are also added into the tooltip, as shown below.
+
+![](guide/5.9.jpg)
+
+The end product looks like this!
+
+![](guide/5.10.jpg)
+
+### 6. Create the error bar on bar chart
+
+In order to allow interactivity with the response and confidence level, two parameters need to be created: Response and Confidence Level.
+
+The following steps are taken to create the parameters:
+
+1. At the Data tab on the left panel, click on the black dropdown arrow and select "Create Parameter..."
+
+![](guide/6.0.jpg)
+
+2. For "Response", enter the values shown in the figure below (note that the values can be added from dimensions):
+
+![](guide/6.1.jpg)
+
+3. For "Confidence Level", enter the values shown in the figure below:
+
+![](guide/6.2.jpg)
+
+The following calculated fields need to be created for the error bar:
+
+Field name | Formula
+-----------|-------------
+Count_Response | IF [vac_1]=[Response] THEN 1 ELSE 0 END
+Prop_Response | SUM([Count_Response])/SUM([Number of Records])
+Prop_Response_Margin of Error | [Confidence Level]*(SQRT(([Prop_Response]*(1-[Prop_Response]))/SUM([Number of Records])))
+Prop_Response_Lower | [Prop_Response] - [Prop_Response_Margin of Error]
+Prop_Response_Upper | [Prop_Response] + [Prop_Response_Margin of Error]
+
+Refer to earlier steps on how to create calculated fields.
+
+Next, the error bar on bar chart is created taking the following steps:
+
+1. Click and drag "Prop_Response" to Columns and "Country" to Rows
+2. Drag Measure Values to the dual-axis line for the x-axis
+
+![](guide/6.3.jpg)
+
+3. Remove all fields except for "Prop_Response_Lower" and "Prop_Response_Upper"
+
+![](guide/6.4.jpg)
+
+4. Right-click the x-axis and select "Synchronize Axis"
+
+![](guide/6.5.jpg)
+
+5. In the Measure Values card, change the chart type to "Line"
+
+![](guide/6.6.jpg)
+
+6. Click and drag "Measure Names" to "Path
+
+![](guide/6.7.jpg)
+
+7. Click and drag "vac_1" to Filters, and select all except Null
+
+![](guide/6.8.jpg)
+
+8. To show the parameters, right-click on the parameter names and select "Show Parameter". Change the parameter options to "Single Value List"
+
+![](guide/6.9.jpg)
+
+9. To align the colour of the bar chart to the same colour palette used in the diverging stacked bar chart, click and drag "Response" to Colour in the AGG(Prop_Response) card.
+
+![](guide/6.10.jpg)
+
+10. To change the colours, toggle between the response values in the Parameter card and the legend. Use the same traffic light colour palette 
+
+![](guide/6.11.jpg)
+11. Sort the graph in descending order 
+
+![](guide/6.12.jpg)
+
+12. Other amendments were made to beautify the graph, such as giving a title, amending the tooltip, removal of the dual x-axis header and colour legend, and aesthetic changes on the line thickness.
+
+The final error bar on bar chart is shown below.
+
+![](guide/6.13.jpg)
+
+### 7. 
+### 8. 
 
 # (e) Major observations revealed by the final product
 
