@@ -145,7 +145,7 @@ The order for both graphs follows the original visualisation (alphabetic order f
 
 # (c) Final product of proposed visualisation
 
-The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found [here]().
+The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found [here](https://public.tableau.com/profile/amanda.tan7302#!/vizhome/DataViz_Makeover_02_Tableau/Dashboard1?publish=yes).
 
 # (d) Step-by-step description to prepare the final product
 
@@ -517,6 +517,12 @@ The blueprint of the final dashboard is as shown below, including the blank spac
 
 # (e) Major observations revealed by the final product
 
+### Impact of age and sex on willingness to take the Covid-19 vaccination
+
+In general, people who are older tend to have stronger agreement with the statement to take the Covid-19 vaccination, as compared to people who are younger. This pattern can be observed quite visibly across countries, using the brushing technique on the Age slider bar.
+
+Of people falling in the the older age range, males are more likely to agree than females, as seen from comparing the diverging stacked bar chart for different sexes. Generally, males seems to be more willing, but the effect is more pronounced in the older age range.
+
 ### Fear of side effects of the Covid-19 vaccine
 
 From the diverging stacked bar chart, it is observed that people who strongly disagree and disagree to taking the Covid-19 vaccine if they have the choice now are generally worried about the side effects of the vaccine. On the other hand, people who strongly agree and agree to taking the Covid-19 vaccine are less concerned on the vaccine's side effects. 
@@ -527,9 +533,7 @@ Should governments and public agencies want to encourage the public to be vaccin
 
 ### Higher uncertainty for less opinionated responses
 
+Using the parameters option to explore the error bar patterns of the responses for different confidence intervals, it is observed the error bars are generally shorter for "1 - Strongly agree" and "5 - Strongly disagree", meaning that the variation is not as large for people who give stronger responses. On the other hand, the error bars for people whose responses are not as strong or neutral are longer, meaning that these groups tend to be less predictable and are more likely to change their responses.
 
+From the above observations, we can see that the responses related to the Covid-19 vaccinations is still somewhat uncertain, with certain groups of people (different demographics, different countries) being more willing than others to be vaccinated. Strategies targeted at certain groups can be taken by the governments to influence the decisions of the individual, in the fight against the Covid-19 virus.
 
-
-### 
-
-Generally people who strongly agree with the statement that they would get the Covid-19 vaccine are less worried about the side effects of the vaccine. This pattern is largely observed across the countries. Of those who 

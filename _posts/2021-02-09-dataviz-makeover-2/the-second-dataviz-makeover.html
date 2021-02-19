@@ -1587,7 +1587,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 <p>The order for both graphs follows the original visualisation (alphabetic order for the diverging stacked bar chart and descending order for the horizontal bar chart with error bar). With the purpose of each graph to be explicitly included in the graph titles, there is no need to align the ordering as the purpose of the graphs is different.</p>
 <h1 id="c-final-product-of-proposed-visualisation">(c) Final product of proposed visualisation</h1>
-<p>The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found <a href="">here</a>.</p>
+<p>The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found <a href="https://public.tableau.com/profile/amanda.tan7302#!/vizhome/DataViz_Makeover_02_Tableau/Dashboard1?publish=yes">here</a>.</p>
 <h1 id="d-step-by-step-description-to-prepare-the-final-product">(d) Step-by-step description to prepare the final product</h1>
 <h3 id="place-all-relevant-csv-files-into-one-folder">1. Place all relevant csv files into one folder</h3>
 <p>Extract all zipped files and place all countries’ csv files into the same folder. For countries with missing vaccination fields, they are placed in a sub-folder “missing_vac”.</p>
@@ -1971,6 +1971,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>The blueprint of the final dashboard is as shown below, including the blank spaces that were added in.</p>
 <p><img src="guide/7.5.jpg" /></p>
 <h1 id="e-major-observations-revealed-by-the-final-product">(e) Major observations revealed by the final product</h1>
+<h3 id="impact-of-age-and-sex-on-willingness-to-take-the-covid-19-vaccination">Impact of age and sex on willingness to take the Covid-19 vaccination</h3>
+<p>In general, people who are older tend to have stronger agreement with the statement to take the Covid-19 vaccination, as compared to people who are younger. This pattern can be observed quite visibly across countries, using the brushing technique on the Age slider bar.</p>
+<p>Of people falling in the the older age range, males are more likely to agree than females, as seen from comparing the diverging stacked bar chart for different sexes. Generally, males seems to be more willing, but the effect is more pronounced in the older age range.</p>
+<h3 id="fear-of-side-effects-of-the-covid-19-vaccine">Fear of side effects of the Covid-19 vaccine</h3>
+<p>From the diverging stacked bar chart, it is observed that people who strongly disagree and disagree to taking the Covid-19 vaccine if they have the choice now are generally worried about the side effects of the vaccine. On the other hand, people who strongly agree and agree to taking the Covid-19 vaccine are less concerned on the vaccine’s side effects.</p>
+<p>In addition, among those who disagrees, their stand on not taking the vaccine actually dilutes over time. Looking at the response on whether they agree to take the vaccine one year from now, there are some who still strongly disagrees, but we can observe that there is more ambiguity to the response overall.</p>
+<p>Should governments and public agencies want to encourage the public to be vaccinated, a possible strategy would be to target these groups’ concerns, which may have a good chance to change their minds.</p>
+<h3 id="higher-uncertainty-for-less-opinionated-responses">Higher uncertainty for less opinionated responses</h3>
+<p>Using the parameters option to explore the error bar patterns of the responses for different confidence intervals, it is observed the error bars are generally shorter for “1 - Strongly agree” and “5 - Strongly disagree”, meaning that the variation is not as large for people who give stronger responses. On the other hand, the error bars for people whose responses are not as strong or neutral are longer, meaning that these groups tend to be less predictable and are more likely to change their responses.</p>
+<p>From the above observations, we can see that the responses related to the Covid-19 vaccinations is still somewhat uncertain, with certain groups of people (different demographics, different countries) being more willing than others to be vaccinated. Strategies targeted at certain groups can be taken by the governments to influence the decisions of the individual, in the fight against the Covid-19 virus.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
