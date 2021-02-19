@@ -535,7 +535,7 @@ From the diverging stacked bar chart, it is observed that people who strongly di
 
 In addition, among those who disagrees, their stand on not taking the vaccine actually dilutes over time. Looking at the response on whether Norwegians agree to take the vaccine one year from now, slightly more than half of those who strongly disagree now continues to disagree strongly to taking vaccination, whereas for those who disagrees now, more than half are agreeable or neutral. 
 
-![Tooltip across different countries and responses. Generally, the responses across countries are quite similar](images/e4.jpg)
+![Norway's disagree responses now on getting vaccinated one year on](images/e4.jpg)
 
 Should governments and public agencies want to encourage the public to be vaccinated, a possible strategy would be to target these groups' concerns, which may have a good chance to change their minds.
 
