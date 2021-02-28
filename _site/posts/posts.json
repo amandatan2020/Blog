@@ -17,23 +17,6 @@
     "input_file": "the-second-dataviz-makeover.utf8.md"
   },
   {
-    "path": "posts/welcome/",
-    "title": "Welcome!",
-    "description": "Welcome to my new blog, DataViz Makeover Blog. I hope you enjoy \nreading my posts!",
-    "author": [
-      {
-        "name": "Amanda",
-        "url": "https://example.com/amandatwl"
-      }
-    ],
-    "date": "2021-01-26",
-    "categories": [],
-    "contents": "\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2021-01-26T15:49:08+08:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2021-01-06-dataviz-makeover-1/",
     "title": "My First DataViz Makeover",
     "description": "ISSS608 Visual Analytics and Applications - DataViz Makeover 1",
@@ -49,5 +32,22 @@
     "preview": {},
     "last_modified": "2021-01-28T18:21:17+08:00",
     "input_file": "dataviz-makeover-1.utf8.md"
+  },
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome!",
+    "description": "Welcome to my new blog, DataViz Makeover Blog. I hope you enjoy \nreading my posts!",
+    "author": [
+      {
+        "name": "Amanda",
+        "url": "https://example.com/amandatwl"
+      }
+    ],
+    "date": "2021-01-25",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-02-28T15:37:06+08:00",
+    "input_file": "welcome.utf8.md"
   }
 ]
