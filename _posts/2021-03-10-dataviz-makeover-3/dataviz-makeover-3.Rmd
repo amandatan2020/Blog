@@ -1,0 +1,41 @@
+---
+title: "DataViz Makeover 3"
+description: |
+  ISSS608 Visual Analytics and Applications - DataViz Makeover 2
+author:
+  - name: Amanda
+    url: https://example.com/amandatwl
+    affiliation: Student of SMU MITB
+    affiliation_url: https://www.smu.edu.sg/
+date: 03-10-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# The Data Visualisation
+
+![Spatio-temporal patterns of armed conflict in selected Southeast Asia countries between 2015-2020](images/TheDataViz.jpg)
+# (a) Critique of current visualisation
+
+
+
+# (b) Proposed design
+
+
+
+# (c) Final product of proposed visualisation
+
+
+
+# (d) Step-by-step description to prepare the final product
+
+
+
+# (e) Major observations revealed by the final product
+
+

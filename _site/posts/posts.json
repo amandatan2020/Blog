@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-03-10-dataviz-makeover-3/",
+    "title": "DataViz Makeover 3",
+    "description": "ISSS608 Visual Analytics and Applications - DataViz Makeover 2",
+    "author": [
+      {
+        "name": "Amanda",
+        "url": "https://example.com/amandatwl"
+      }
+    ],
+    "date": "2021-03-10",
+    "categories": [],
+    "contents": "\r\nThe Data Visualisation\r\n # (a) Critique of current visualisation\r\n(b) Proposed design\r\n(c) Final product of proposed visualisation\r\n(d) Step-by-step description to prepare the final product\r\n(e) Major observations revealed by the final product\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-03-10T10:53:30+08:00",
+    "input_file": "dataviz-makeover-3.utf8.md"
+  },
+  {
     "path": "posts/2021-02-09-dataviz-makeover-2/",
     "title": "The Second DataViz Makeover",
     "description": "ISSS608 Visual Analytics and Applications - DataViz Makeover 2",
