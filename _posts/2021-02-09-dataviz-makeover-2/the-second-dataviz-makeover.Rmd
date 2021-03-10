@@ -1,5 +1,5 @@
 ---
-title: "The Second DataViz Makeover"
+title: "The second DataViz Makeover"
 description: |
   ISSS608 Visual Analytics and Applications - DataViz Makeover 2
 author:

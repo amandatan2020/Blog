@@ -1,7 +1,7 @@
 ---
-title: "DataViz Makeover 3"
+title: "The third DataViz Makeover 3"
 description: |
-  ISSS608 Visual Analytics and Applications - DataViz Makeover 2
+  ISSS608 Visual Analytics and Applications - DataViz Makeover 3
 author:
   - name: Amanda
     url: https://example.com/amandatwl
