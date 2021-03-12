@@ -1,7 +1,7 @@
-name: "DataViz_Makeover"
-title: "Amanda's DataViz Web Blog"
+name: "MyDataStory"
+title: "My Data Story"
 description: |
-  DataViz Makeover Blog
+  My journey in the world of Analytics and Data Visualisation
 output_dir: "_site"
 navbar:
   right:

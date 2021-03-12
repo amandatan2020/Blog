@@ -3,17 +3,17 @@
     {
       "path": "about.html",
       "title": "About this blog",
-      "description": "Re-telling stories with data visualisations, from a student's perspective",
+      "description": "Chronicles of my data journey in the world of Analytics and Visualisation.",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-01-27T10:49:57+08:00"
+      "last_modified": "2021-03-13T07:21:02+08:00"
     },
     {
       "path": "index.html",
       "title": "DataViz Makeover Blog",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-01-26T18:19:12+08:00"
+      "last_modified": "2021-03-13T07:20:29+08:00"
     }
   ],
   "collections": ["posts/posts.json"]

@@ -1,5 +1,5 @@
 ---
-title: "The third DataViz Makeover 3"
+title: "The third DataViz Makeover"
 description: |
   ISSS608 Visual Analytics and Applications - DataViz Makeover 3
 author:
@@ -69,13 +69,15 @@ The line graphs are repeated plots representing different event types over time,
 
 The number of Protests in 2020 decreased drastically from 2019, whereas the number of Strategic developments has seen a steady increase from past years. The graph patterns seem to indicate that Strategic development has a much higher number of events than Protests, and that the number of Protests is close to zero, but it is not so when we compare the values! In 2020, the number of Protests is about 125-130, and the number of Strategic development events is about 150.
 
-### 5) 
+### 5) Order of event types in line graphs not intuitive
 
+At first glance, the order in which the line graphs are arranged vertically is not clear, a result of different ranges in the line graphs as discussed earlier. Upon a closer look, the sort icon in the x-axis indicates that the line graphs are sorted in descending order. However, this is still not apparent from the line graphs themselves, and require the audience to trace the number of events across line graphs in order to understand the sorting.
 
+![Line graphs sorted in descending order](critique/c5.jpg)
 
-### 6) 
+### 6) Different data aggregation in map and line graphs
 
-
+The map displays the total number of armed conflicts in the six years, whereas the line graphs display the annual number of armed conflicts over the six years. As the data aggregation is different, the audience is unable to visualise the combined effect of the spatio pattern and temporal pattern of the data, i.e. cannot tell what is the trend of armed conflict events over time of a specific region of the country.
 
 ## Aesthetics
 
@@ -93,17 +95,39 @@ From the diagram above, we can see that there is no legend to inform on the shap
 
 ### 2) Good amount of non-data ink for the line graphs
 
-There is a good amount of non-data ink for the line graphs, making it easy to read and understand the line graphs.
+There is a good amount of non-data ink for the line graphs, making the design clean and easy to read.
 
-As the graph titles are usually placed at the top or bottom of graphs, the label *Event Type* at the top of the graphs direct the audience to where the title actually is. Putting the graph titles at the side also allows for easier vertical comparison of the data without any visual interruption, but we could also argue that the eye needs to go left and right in order to identify which line graph is for which event type. 
+As the graph titles are usually placed at the top or bottom of graphs, the label *Event Type* at the top of the graphs direct the audience to where the title actually is. Putting the graph titles at the side also allows for easier vertical comparison of the data without any visual interruption, but we could also argue that the eye needs to go left and right in order to identify which line graph is for which event type.
+
+![*Event Type* label shows where the graph titles are](critique/a2a.jpg)
 
 On the other hand, the label *Event Date* may be misleading as only the year component of the event dates are shown in the x-axis. As the x-axis labels are only at the bottom, it is a relatively long distance to trace between the first graph at the top to the x-axis labels to identify the corresponding year for each data point in the line graphs. It would be better if *Event Date* is replaced with year labels repeated  at top. There is no need for the *Year* x-axis title as it will be intuitive that year is being represented on the x-axis with the labels themselves.
 
-The y-axis titles for the line graphs do not provide value to the audience as it refers to a *Sheet1* that the audience have no idea about and no access to. Furthermore, the y-axis title is in boldface and is repeated for each line graph, which draws attention away from the more important graph title beside it and provides non-value-add for the audience in understand what the line graphs are plotted against.
+![*Event Date* label not necessary as x-axis labels is able to show that year ie being depicted](critique/a2b.jpg)
 
-### 3) 
+The y-axis titles for the line graphs do not provide value to the audience as it refers to a *Sheet1* that the audience have no idea about and no access to. Furthermore, the y-axis title is orientated vertically and is repeated for each line graph, which makes it harder to read and does not value-add in understanding what the line graphs are plotted against.
+
+![Difficult to understand and read y-axis titles](critique/a2c.jpg)
+
+### 3) Colour scale not employed across graphs
+
+The map uses colour to encode the event type (mapping shown in the legend on the right), however the line graph uses the same colour blue as *Battles* in the map, for all the event types. Furthermore, colour perception is more powerful and efficient than reading and understanding textual description, i.e. graph titles. This means that the audience would need to work harder in linking and de-linking colours, and  reading the graph titles, when switching between the map and line graphs.
+
+### 4) Position of colour legend too far from map
+
+As the colour scales are only used in the map, the audience need to trace horizontally across the entire visualisation to refer to the colour legend. The legend should be placed appropriately near to where the colour scale is used for the audience to have easy reference.
 
 ## Interactivity
+
+### 1) Basic map interactivity provided
+
+
+
+### 2) Action on one graph 
+
+
+
+### 3)
 
 
 
