@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","images/TheDataViz.jpg"]}
+  {"type":"character","attributes":{},"value":["critique/a1.jpg","critique/a1circle.jpg","critique/a1square.jpg","critique/c1-1.jpg","critique/c1-2.jpg","critique/c1-3.jpg","critique/c2.jpg","dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","images/TheDataViz.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1478,9 +1478,52 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h1 id="the-data-visualisation">The Data Visualisation</h1>
-<p><img src="images/TheDataViz.jpg" alt="Spatio-temporal patterns of armed conflict in selected Southeast Asia countries between 2015-2020" /> # (a) Critique of current visualisation</p>
+<p>The South-east Asia Armed Conflict Analysis is a data visualisation created to reveal spatio-temporal patterns of armed conflict in selected South-east Asia countries between 2015-2020. The link to the interactive visualisation can be found <a href="https://public.tableau.com/views/South-eastAsiaArmedConflictAnalysis/South-eastAsiaArmedConflictAnalysis?:language=en&amp;:display_count=y&amp;:origin=viz_share_link">here</a>.</p>
+<figure>
+<img src="images/TheDataViz.jpg" alt="Spatio-temporal patterns of armed conflict in selected Southeast Asia countries between 2015-2020" /><figcaption aria-hidden="true">Spatio-temporal patterns of armed conflict in selected Southeast Asia countries between 2015-2020</figcaption>
+</figure>
+<h1 id="a-critique-of-current-visualisation">(a) Critique of current visualisation</h1>
+<p>There are three evaluation criteria in this critique: (i) clarity; (ii) aesthetics; and (iii) interactivity. Each criterion will be discussed individually, and discussion points that cut across criterion will be placed with the main criterion that it falls under, with highlights on how the other criteria are affected.</p>
+<h2 id="clarity">Clarity</h2>
+<h3 id="unable-to-see-data-points-clearly-when-clustered-together-on-the-map">1) Unable to see data points clearly when clustered together on the map</h3>
+<p>In areas with high number and variety of armed conflict events, the data points on the map overlap. As the data points are opaque with no borders, this results in two issues, discussed below.</p>
+<h4 id="a-difficulty-in-identifying-the-number-of-data-points-of-the-same-colour">A) Difficulty in identifying the number of data points of the same colour</h4>
+<p>The main purpose of the map is to show the location of armed conflict events. In locations with high number of events, the map would provide the intensity of events, depicted by the number of data points in the area. As seen from the diagram below, it is difficult to differentiate the data points of the same colour as they form one big mass due to the lack of borders or outlines. This reduces the clarity on the number of armed conflict events happening within the area.</p>
+<figure>
+<img src="critique/c1-1.jpg" alt="Data points form masses due to lack of outlines" /><figcaption aria-hidden="true">Data points form masses due to lack of outlines</figcaption>
+</figure>
+<h4 id="b-unable-to-tell-if-there-are-any-data-points-and-its-colour-covered-by-the-data-point-at-top-layer">B) Unable to tell if there are any data points (and its colour) covered by the data point at top layer</h4>
+<p>At the country level (zoomed-out view), the overlapping of the opaque data points causes those data points at the bottom layers to be obscured by the data points at the top layer, as shown in the diagram below. As such, the audience has no clarity on the other types of armed conflict events that occur within the area.</p>
+<figure>
+<img src="critique/c1-2.jpg" alt="Data points at top layer obscuring data points at bottom layers" /><figcaption aria-hidden="true">Data points at top layer obscuring data points at bottom layers</figcaption>
+</figure>
+<p>Another problem that the opaque data point causes is that the audience is unable to tell the name of the area when the data points occur where the names of the area are placed. In the diagram below, the word “Myanmar” could hardly be seen although we could argue that the general public could still make out the word “Myanmar” due to familiarity. However, if we go down to the division/state/region level, one who is not familiar with the Myanmar system would not be able to make out the names of the divisions/states/regions that are fully/partially obscured by the data points, e.g. “Chin” and “Naypyitaw” in the diagram below.</p>
+<figure>
+<img src="critique/c1-3.jpg" alt="Data points at top layer obscuring data points at bottom layers" /><figcaption aria-hidden="true">Data points at top layer obscuring data points at bottom layers</figcaption>
+</figure>
+<h3 id="information-in-tooltip-not-useful">2) Information in tooltip not useful</h3>
+<p>In the interactive version of the visualisation, a tooltip (see diagram below) is shown when mousing over each data point on the map. The <em>Event Id Cnty</em> shows the individual event identifier by number and country acronym; the <em>Event Type</em> shows the type of armed conflict event; and the <em>Latitude</em> and <em>Longitude</em> show the latitude and longitude of the location respectively. The <em>Event Id Cnty</em>, <em>Latitude</em> and <em>Longitude</em> are very specific and too detailed, which does not value-add in the understanding of spatio-temporal patterns of armed conflict in the area.</p>
+<figure>
+<img src="critique/c2.jpg" alt="Tooltip information not useful" /><figcaption aria-hidden="true">Tooltip information not useful</figcaption>
+</figure>
+<h2 id="aesthetics">Aesthetics</h2>
+<h3 id="issues-with-shape-encoding-on-map">1) Issues with shape encoding on map</h3>
+<p>There is shape encoding in the map visualisation, however, the size of the data points is too small for the audience to make out the shape unless one scrutinises the data points or has a sharp eye for details. The size of the data points remain unchanged even after zooming in.</p>
+<figure>
+<img src="critique/a1.jpg" alt="Size of data points too small to see the shape" /><figcaption aria-hidden="true">Size of data points too small to see the shape</figcaption>
+</figure>
+<p>From the diagram above, we can see that there is no legend to inform on the shape encoding. It is not clear what is being encoded by the shape. In addition, there is no differentiation in the data point tooltip information for the audience to make a guess at what the shape encodes. This reduces the clarity of the shape aesthetic.</p>
+<figure>
+<img src="critique/a1circle.jpg" style="width:60.0%" alt="Tooltip for blue circle data point" /><figcaption aria-hidden="true">Tooltip for blue circle data point</figcaption>
+</figure>
+<figure>
+<img src="critique/a1square.jpg" style="width:60.0%" alt="Tooltip for blue square data point" /><figcaption aria-hidden="true">Tooltip for blue square data point</figcaption>
+</figure>
+<h3 id="section">2)</h3>
+<h2 id="interactivity">Interactivity</h2>
 <h1 id="b-proposed-design">(b) Proposed design</h1>
 <h1 id="c-final-product-of-proposed-visualisation">(c) Final product of proposed visualisation</h1>
+<p>The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found <a href="">here</a>.</p>
 <h1 id="d-step-by-step-description-to-prepare-the-final-product">(d) Step-by-step description to prepare the final product</h1>
 <h1 id="e-major-observations-revealed-by-the-final-product">(e) Major observations revealed by the final product</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>

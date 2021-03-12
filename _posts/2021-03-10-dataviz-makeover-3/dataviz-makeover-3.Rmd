@@ -19,8 +19,91 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # The Data Visualisation
 
+The South-east Asia Armed Conflict Analysis is a data visualisation created to reveal spatio-temporal patterns of armed conflict in selected South-east Asia countries between 2015-2020. The link to the interactive visualisation can be found [here](https://public.tableau.com/views/South-eastAsiaArmedConflictAnalysis/South-eastAsiaArmedConflictAnalysis?:language=en&:display_count=y&:origin=viz_share_link).
+
 ![Spatio-temporal patterns of armed conflict in selected Southeast Asia countries between 2015-2020](images/TheDataViz.jpg)
+
 # (a) Critique of current visualisation
+
+There are three evaluation criteria in this critique: (i) clarity; (ii) aesthetics; and (iii) interactivity. Each criterion will be discussed individually, and discussion points that cut across criterion will be placed with the main criterion that it falls under, with highlights on how the other criteria are affected.
+
+## Clarity
+
+### 1) Appropriate choice of map and line graph
+
+The choice of map to show the location of armed conflict events, encoded by colour and shape to differentiate the different types of armed conflict events, is good as the audience can perceive location together with distance on a map better and other patterns of the data can also surface with the use of the colour and shape scales.
+
+The line graphs are also appropriate to show the trend of armed conflict events over time.
+
+### 2) Unable to see data points clearly when clustered together on the map
+
+In areas with high number and variety of armed conflict events, the data points on the map overlap. As the data points are opaque with no borders, this results in two issues, discussed below.
+
+#### A) Difficulty in identifying the number of data points of the same colour
+
+The main purpose of the map is to show the location of armed conflict events. In locations with high number of events, the map would provide the intensity of events, depicted by the number of data points in the area. As seen from the diagram below, it is difficult to differentiate the data points of the same colour as they form one big mass due to the lack of borders or outlines. This reduces the clarity on the number of armed conflict events happening within the area.
+
+![Data points form masses due to lack of outlines](critique/c2a.jpg)
+
+#### B) Unable to tell if there are any data points (and its colour) covered by the data point at top layer
+
+At the country level (zoomed-out view), the overlapping of the opaque data points causes those data points at the bottom layers to be obscured by the data points at the top layer, as shown in the diagram below. As such, the audience has no clarity on the other types of armed conflict events that occur within the area.
+
+![Data points at top layer obscuring data points at bottom layers](critique/c2b.jpg)
+
+Another problem that the opaque data point causes is that the audience is unable to tell the name of the area when the data points occur where the names of the area are placed. In the diagram below, the word "Myanmar" could hardly be seen although we could argue that the general public could still make out the word "Myanmar" due to familiarity. However, if we go down to the division/state/region level, one who is not familiar with the Myanmar system would not be able to make out the names of the divisions/states/regions that are fully/partially obscured by the data points, e.g. "Chin" and "Naypyitaw" in the diagram below.
+
+![Data points at top layer obscuring data points at bottom layers](critique/c2c.jpg)
+
+### 3) Information in map data point tooltip not useful
+
+In the interactive version of the visualisation, a tooltip (see diagram below) is shown when mousing over each data point on the map. The *Event Id Cnty* shows the individual event identifier by number and country acronym; the *Event Type* shows the type of armed conflict event; and the *Latitude* and *Longitude* show the latitude and longitude of the location respectively. The *Event Id Cnty*, *Latitude* and *Longitude* are very specific and too detailed, which does not value-add in the understanding of spatio-temporal patterns of armed conflict in the area.
+
+![Tooltip information not useful](critique/c3.jpg)
+
+### 4) Issues with y-axis range in line graphs
+
+The line graphs are repeated plots representing different event types over time, shown in a vertical fashion. It is not quite a trellis chart, as the range of each y-axis differs across the different line graphs. Another issue is that the line graphs do not start at zero. Although the pattern of the number of armed conflict event over time is clearly shown for each event type (allowing a more visual comparison of the pattern),  the line graphs mislead the audience into overestimating or underestimating the number of events. To illustrate the point, let us take a closer look at the line graphs for Protests and Strategic developments. 
+
+![Line graphs for *Protests* and *Strategic developments* event types](critique/c4.jpg)
+
+The number of Protests in 2020 decreased drastically from 2019, whereas the number of Strategic developments has seen a steady increase from past years. The graph patterns seem to indicate that Strategic development has a much higher number of events than Protests, and that the number of Protests is close to zero, but it is not so when we compare the values! In 2020, the number of Protests is about 125-130, and the number of Strategic development events is about 150.
+
+### 5) 
+
+
+
+### 6) 
+
+
+
+## Aesthetics
+
+### 1) Issues with shape encoding on map
+
+There is shape encoding in the map visualisation, however, the size of the data points is too small for the audience to make out the shape unless one scrutinises the data points or has a sharp eye for details. The size of the data points remain unchanged even after zooming in.
+
+![Size of data points too small to see the shape](critique/a1.jpg)
+
+From the diagram above, we can see that there is no legend to inform on the shape encoding. It is not clear what is being encoded by the shape. In addition, there is no differentiation in the data point tooltip information for the audience to make a guess at what the shape encodes. This reduces the clarity of the shape aesthetic.
+
+![Tooltip for blue circle data point](critique/a1circle.jpg){width=60%}
+
+![Tooltip for blue square data point](critique/a1square.jpg){width=60%}
+
+### 2) Good amount of non-data ink for the line graphs
+
+There is a good amount of non-data ink for the line graphs, making it easy to read and understand the line graphs.
+
+As the graph titles are usually placed at the top or bottom of graphs, the label *Event Type* at the top of the graphs direct the audience to where the title actually is. Putting the graph titles at the side also allows for easier vertical comparison of the data without any visual interruption, but we could also argue that the eye needs to go left and right in order to identify which line graph is for which event type. 
+
+On the other hand, the label *Event Date* may be misleading as only the year component of the event dates are shown in the x-axis. As the x-axis labels are only at the bottom, it is a relatively long distance to trace between the first graph at the top to the x-axis labels to identify the corresponding year for each data point in the line graphs. It would be better if *Event Date* is replaced with year labels repeated  at top. There is no need for the *Year* x-axis title as it will be intuitive that year is being represented on the x-axis with the labels themselves.
+
+The y-axis titles for the line graphs do not provide value to the audience as it refers to a *Sheet1* that the audience have no idea about and no access to. Furthermore, the y-axis title is in boldface and is repeated for each line graph, which draws attention away from the more important graph title beside it and provides non-value-add for the audience in understand what the line graphs are plotted against.
+
+### 3) 
+
+## Interactivity
 
 
 
@@ -30,7 +113,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # (c) Final product of proposed visualisation
 
-
+The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found [here]().
 
 # (d) Step-by-step description to prepare the final product
 
