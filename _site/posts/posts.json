@@ -53,18 +53,18 @@
   {
     "path": "posts/welcome/",
     "title": "Welcome!",
-    "description": "Welcome to my new blog, DataViz Makeover Blog. I hope you enjoy \nreading my posts!",
+    "description": {},
     "author": [
       {
         "name": "Amanda",
-        "url": "https://example.com/amandatwl"
+        "url": "https://mydatastory.netlify.app/about.html"
       }
     ],
     "date": "2021-01-25",
     "categories": [],
-    "contents": "\r\n\r\n\r\n\r\n",
+    "contents": "\r\nHello there! This is my web blog as I embark on my journey in data analytics and visualisation. Hope you will enjoy reading my posts!\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-02-28T15:37:06+08:00",
-    "input_file": {}
+    "last_modified": "2021-03-13T07:33:01+08:00",
+    "input_file": "welcome.utf8.md"
   }
 ]
