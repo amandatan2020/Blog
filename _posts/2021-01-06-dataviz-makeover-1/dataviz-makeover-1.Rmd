@@ -1,5 +1,5 @@
 ---
-title: "My First DataViz Makeover"
+title: "My first DataViz Makeover"
 description: |
   ISSS608 Visual Analytics and Applications - DataViz Makeover 1
 author:

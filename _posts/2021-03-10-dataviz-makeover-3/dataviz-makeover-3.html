@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["critique/a1.jpg","critique/a1circle.jpg","critique/a1square.jpg","critique/a2a.jpg","critique/a2b.jpg","critique/a2c.jpg","critique/c2a.jpg","critique/c2b.jpg","critique/c2c.jpg","critique/c3.jpg","critique/c4.jpg","critique/c5.jpg","dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","images/TheDataViz.jpg"]}
+  {"type":"character","attributes":{},"value":["critique/a1.jpg","critique/a1circle.jpg","critique/a1square.jpg","critique/a2a.jpg","critique/a2b.jpg","critique/a2c.jpg","critique/c2a.jpg","critique/c2b.jpg","critique/c2c.jpg","critique/c3.jpg","critique/c4.jpg","critique/c5.jpg","critique/i2a.jpg","critique/i2b.jpg","critique/i2c.jpg","critique/i2d.jpg","critique/i2e.jpg","critique/i2f.jpg","critique/i3.jpg","critique/i4a.jpg","critique/i4b.jpg","dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","images/TheDataViz.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1485,7 +1485,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1 id="a-critique-of-current-visualisation">(a) Critique of current visualisation</h1>
 <p>There are three evaluation criteria in this critique: (i) clarity; (ii) aesthetics; and (iii) interactivity. Each criterion will be discussed individually, and discussion points that cut across criterion will be placed with the main criterion that it falls under, with highlights on how the other criteria are affected.</p>
 <h2 id="clarity">Clarity</h2>
-<h3 id="appropriate-choice-of-map-and-line-graph">1) Appropriate choice of map and line graph</h3>
+<h3 id="good-choice-of-chart-types">1) Good choice of chart types</h3>
 <p>The choice of map to show the location of armed conflict events, encoded by colour and shape to differentiate the different types of armed conflict events, is good as the audience can perceive location together with distance on a map better and other patterns of the data can also surface with the use of the colour and shape scales.</p>
 <p>The line graphs are also appropriate to show the trend of armed conflict events over time.</p>
 <h3 id="unable-to-see-data-points-clearly-when-clustered-together-on-the-map">2) Unable to see data points clearly when clustered together on the map</h3>
@@ -1510,7 +1510,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <img src="critique/c3.jpg" alt="Tooltip information not useful" /><figcaption aria-hidden="true">Tooltip information not useful</figcaption>
 </figure>
 <h3 id="issues-with-y-axis-range-in-line-graphs">4) Issues with y-axis range in line graphs</h3>
-<p>The line graphs are repeated plots representing different event types over time, shown in a vertical fashion. It is not quite a trellis chart, as the range of each y-axis differs across the different line graphs. Another issue is that the line graphs do not start at zero. Although the pattern of the number of armed conflict event over time is clearly shown for each event type (allowing a more visual comparison of the pattern), the line graphs mislead the audience into overestimating or underestimating the number of events. To illustrate the point, let us take a closer look at the line graphs for Protests and Strategic developments.</p>
+<p>The line graphs are small multiples, showing manageable chunks of information in a single view. This makes it clean and easy to view and compare the data patterns. However, the range of each y-axis differs across the different line graphs, and the y-axis does not start at zero. This causes the audience to focus on the patterns and overlook the actual numbers, and misleads the audience into thinking that the patterns give a good representation of the values. To illustrate the point, let us take a closer look at the line graphs for Protests and Strategic developments.</p>
 <figure>
 <img src="critique/c4.jpg" alt="Line graphs for Protests and Strategic developments event types" /><figcaption aria-hidden="true">Line graphs for <em>Protests</em> and <em>Strategic developments</em> event types</figcaption>
 </figure>
@@ -1545,7 +1545,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <figure>
 <img src="critique/a2b.jpg" alt="Event Date label not necessary as x-axis labels is able to show that year ie being depicted" /><figcaption aria-hidden="true"><em>Event Date</em> label not necessary as x-axis labels is able to show that year ie being depicted</figcaption>
 </figure>
-<p>The y-axis titles for the line graphs do not provide value to the audience as it refers to a <em>Sheet1</em> that the audience have no idea about and no access to. Furthermore, the y-axis title is orientated vertically and is repeated for each line graph, which makes it harder to read and does not value-add in understanding what the line graphs are plotted against.</p>
+<p>The y-axis titles for the line graphs do not provide value to the audience as it refers to a <em>Sheet1</em> that the audience have no idea about and no access to. Furthermore, the y-axis title is orientated vertically and is repeated for each line graph, which makes it hard to read and does not value-add in understanding what the line graphs are plotted against.</p>
 <figure>
 <img src="critique/a2c.jpg" alt="Difficult to understand and read y-axis titles" /><figcaption aria-hidden="true">Difficult to understand and read y-axis titles</figcaption>
 </figure>
@@ -1554,9 +1554,50 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h3 id="position-of-colour-legend-too-far-from-map">4) Position of colour legend too far from map</h3>
 <p>As the colour scales are only used in the map, the audience need to trace horizontally across the entire visualisation to refer to the colour legend. The legend should be placed appropriately near to where the colour scale is used for the audience to have easy reference.</p>
 <h2 id="interactivity">Interactivity</h2>
-<h3 id="basic-map-interactivity-provided">1) Basic map interactivity provided</h3>
-<h3 id="action-on-one-graph">2) Action on one graph</h3>
-<h3 id="section">3)</h3>
+<h3 id="different-views-allowing-multi-dimensional-analysis">1) Different views allowing multi-dimensional analysis</h3>
+<p>The visualisation shows two different views of the data on screen: map and line graphs. This allows for user interaction with the two graphs and easy comparison of data between the two views (though limited, as discussed earlier under the clarity criterion).</p>
+<h3 id="limited-data-and-view-specification-capabilities">2) Limited data and view specification capabilities</h3>
+<p>Both views provide the mouse-over view and selection functions (pointer and drag-box) to view more information, and the map view provides basic map interaction such as zoom, pan and added selection functions of radial and lasso selections. The features and usability of the interactivity will be discussed in detail next.</p>
+<h4 id="a-added-tooltip-with-drag-box-selection-not-useful-for-map-view">A) Added tooltip with drag-box selection not useful for map view</h4>
+<figure>
+<img src="critique/i2a.jpg" alt="Tooltip information for drag-box selection does not make sense" /><figcaption aria-hidden="true">Tooltip information for drag-box selection does not make sense</figcaption>
+</figure>
+<p>With the selection of a set of data points, the user is able to mouse over to view the tooltip information of the selected points. The plus point is that there is an option to access the data of the selected data points, and the minus point is that the <em>SUM of AVG(Longitude)</em> value does not make any sense for the selected data points.</p>
+<h4 id="b-useful-informationfeature-in-added-tooltip-with-drag-box-selection-of-a-single-year-in-line-graphs">B) Useful information/feature in added tooltip with drag-box selection of a <strong>single year</strong> in line graphs</h4>
+<figure>
+<img src="critique/i2b.jpg" alt="Tooltip information for drag-box selection of a single year across event types" /><figcaption aria-hidden="true">Tooltip information for drag-box selection of a single year across event types</figcaption>
+</figure>
+<p>Similar to the drag-box selection in the map view, the user is able to view the tooltip information of the selected data points. <em>SUM of CNT(Sheet1)</em> field provides the total number of events for the selected data points, which is useful information. The sorting feature is also useful, since it is visually difficult to compare the values and sorting the data would help to see the order. The diagram below shows the output after sorting 2016 data in descending order.</p>
+<figure>
+<img src="critique/i2c.jpg" alt="Line graphs after clicking on the descending sort button" /><figcaption aria-hidden="true">Line graphs after clicking on the descending sort button</figcaption>
+</figure>
+<p>The sorted display of the line graphs does not have any indication that the data is sorted should the user remove the selection. To make matters worse, the difference in the y-axis range across the line graphs and the y-axis not starting at zero do not aid the user in perceiving the sorting order (ascending or descending).</p>
+<h4 id="c-sorting-feature-in-added-tooltip-not-useful-with-drag-box-selection-across-years-in-line-graphs">C) Sorting feature in added tooltip not useful with drag-box selection <strong>across years</strong> in line graphs</h4>
+<p>If the user wants to find out more on the number of <em>Explosions/Remote violence</em> and <em>Violence against civilians</em> events between 2016 and 2018, the visualisation allows the selection and displays the sum of the events when mousing over one of the data points.</p>
+<p><img src="critique/i2d.jpg" alt="Tooltip information for drag-box selection across years and event types" /> The sorting feature is also available, and the output after sorting is shown below.</p>
+<figure>
+<img src="critique/i2e.jpg" alt="Chart type and year order change after clicking on the descending sort button" /><figcaption aria-hidden="true">Chart type and year order change after clicking on the descending sort button</figcaption>
+</figure>
+<p>This sorting feature and its output create confusion to the user due to the following:</p>
+<ul>
+<li>Chart type changes to a bar chart: data shown is the same, but user is required to switch from perceiving lines graphs to bar graphs</li>
+<li>Year order for the selected years changes: order does not make sense, even when compared to bar charts. The change is also subtle and might go undetected</li>
+</ul>
+<p>In addition, the selection function changes to a radial selection after sorting was done, and there is no option for user to switch to other selection options on the line graphs.</p>
+<figure>
+<img src="critique/i2f.jpg" alt="Radial selection option after clicking on the descending sort button" /><figcaption aria-hidden="true">Radial selection option after clicking on the descending sort button</figcaption>
+</figure>
+<h3 id="limited-coordinated-view">3) Limited coordinated view</h3>
+<figure>
+<img src="critique/i3.jpg" alt="Radial selection option after clicking on the descending sort button" /><figcaption aria-hidden="true">Radial selection option after clicking on the descending sort button</figcaption>
+</figure>
+<h3 id="country-filtering">4) Country filtering</h3>
+<figure>
+<img src="critique/i4a.jpg" alt="Radial selection option after clicking on the descending sort button" /><figcaption aria-hidden="true">Radial selection option after clicking on the descending sort button</figcaption>
+</figure>
+<figure>
+<img src="critique/i4b.jpg" alt="Radial selection option after clicking on the descending sort button" /><figcaption aria-hidden="true">Radial selection option after clicking on the descending sort button</figcaption>
+</figure>
 <h1 id="b-proposed-design">(b) Proposed design</h1>
 <h1 id="c-final-product-of-proposed-visualisation">(c) Final product of proposed visualisation</h1>
 <p>The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found <a href="">here</a>.</p>

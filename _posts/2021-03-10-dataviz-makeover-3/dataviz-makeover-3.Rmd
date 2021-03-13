@@ -29,7 +29,7 @@ There are three evaluation criteria in this critique: (i) clarity; (ii) aestheti
 
 ## Clarity
 
-### 1) Appropriate choice of map and line graph
+### 1) Good choice of chart types
 
 The choice of map to show the location of armed conflict events, encoded by colour and shape to differentiate the different types of armed conflict events, is good as the audience can perceive location together with distance on a map better and other patterns of the data can also surface with the use of the colour and shape scales.
 
@@ -63,7 +63,7 @@ In the interactive version of the visualisation, a tooltip (see diagram below) i
 
 ### 4) Issues with y-axis range in line graphs
 
-The line graphs are repeated plots representing different event types over time, shown in a vertical fashion. It is not quite a trellis chart, as the range of each y-axis differs across the different line graphs. Another issue is that the line graphs do not start at zero. Although the pattern of the number of armed conflict event over time is clearly shown for each event type (allowing a more visual comparison of the pattern),  the line graphs mislead the audience into overestimating or underestimating the number of events. To illustrate the point, let us take a closer look at the line graphs for Protests and Strategic developments. 
+The line graphs are small multiples, showing manageable chunks of information in a single view. This makes it clean and easy to view and compare the data patterns. However, the range of each y-axis differs across the different line graphs, and the y-axis does not start at zero. This causes the audience to focus on the patterns and overlook the actual numbers, and misleads the audience into thinking that the patterns give a good representation of the values. To illustrate the point, let us take a closer look at the line graphs for Protests and Strategic developments. 
 
 ![Line graphs for *Protests* and *Strategic developments* event types](critique/c4.jpg)
 
@@ -105,7 +105,7 @@ On the other hand, the label *Event Date* may be misleading as only the year com
 
 ![*Event Date* label not necessary as x-axis labels is able to show that year ie being depicted](critique/a2b.jpg)
 
-The y-axis titles for the line graphs do not provide value to the audience as it refers to a *Sheet1* that the audience have no idea about and no access to. Furthermore, the y-axis title is orientated vertically and is repeated for each line graph, which makes it harder to read and does not value-add in understanding what the line graphs are plotted against.
+The y-axis titles for the line graphs do not provide value to the audience as it refers to a *Sheet1* that the audience have no idea about and no access to. Furthermore, the y-axis title is orientated vertically and is repeated for each line graph, which makes it hard to read and does not value-add in understanding what the line graphs are plotted against.
 
 ![Difficult to understand and read y-axis titles](critique/a2c.jpg)
 
@@ -119,17 +119,60 @@ As the colour scales are only used in the map, the audience need to trace horizo
 
 ## Interactivity
 
-### 1) Basic map interactivity provided
+### 1) Different views allowing multi-dimensional analysis
+
+The visualisation shows two different views of the data on screen: map and line graphs. This allows for user interaction with the two graphs and easy comparison of data between the two views (though limited, as discussed earlier under the clarity criterion). 
+
+### 2) Limited data and view specification capabilities
+
+Both views provide the mouse-over view and selection functions (pointer and drag-box) to view more information, and the map view provides basic map interaction such as zoom, pan and added selection functions of radial and lasso selections. The features and usability of the interactivity will be discussed in detail next.
+
+#### A) Added tooltip with drag-box selection not useful for map view
+
+![Tooltip information for drag-box selection does not make sense](critique/i2a.jpg)
+
+With the selection of a set of data points, the user is able to mouse over to view the tooltip information of the selected points. The plus point is that there is an option to access the data of the selected data points, and the minus point is that the *SUM of AVG(Longitude)* value does not make any sense for the selected data points.
+
+#### B) Useful information/feature in added tooltip with drag-box selection of a **single year** in line graphs
+
+![Tooltip information for drag-box selection of a single year across event types](critique/i2b.jpg)
+
+Similar to the drag-box selection in the map view, the user is able to view the tooltip information of the selected data points. *SUM of CNT(Sheet1)* field provides the total number of events for the selected data points, which is useful information. The sorting feature is also useful, since it is visually difficult to compare the values and sorting the data would help to see the order. The diagram below shows the output after sorting 2016 data in descending order. 
+
+![Line graphs after clicking on the descending sort button](critique/i2c.jpg)
+
+The sorted display of the line graphs does not have any indication that the data is sorted should the user remove the selection. To make matters worse, the difference in the y-axis range across the line graphs and the y-axis not starting at zero do not aid the user in perceiving the sorting order (ascending or descending).
+
+#### C) Sorting feature in added tooltip not useful with drag-box selection **across years** in line graphs
+
+If the user wants to find out more on the number of *Explosions/Remote violence* and *Violence against civilians* events between 2016 and 2018, the visualisation allows the selection and displays the sum of the events when mousing over one of the data points.
+
+![Tooltip information for drag-box selection across years and event types](critique/i2d.jpg)
+The sorting feature is also available, and the output after sorting is shown below.
+
+![Chart type and year order change after clicking on the descending sort button](critique/i2e.jpg)
+
+This sorting feature and its output create confusion to the user due to the following:
+
+* Chart type changes to a bar chart: data shown is the same, but user is required to switch from perceiving lines graphs to bar graphs
+* Year order for the selected years changes: order does not make sense, even when compared to bar charts. The change is also subtle and might go undetected
+
+In addition, the selection function changes to a radial selection after sorting was done, and there is no option for user to switch to other selection options on the line graphs.
+
+![Radial selection option after clicking on the descending sort button](critique/i2f.jpg)
+
+### 3) Limited coordinated view
+
+
+![Radial selection option after clicking on the descending sort button](critique/i3.jpg)
 
 
 
-### 2) Action on one graph 
+### 4) Country filtering
 
+![Radial selection option after clicking on the descending sort button](critique/i4a.jpg)
 
-
-### 3)
-
-
+![Radial selection option after clicking on the descending sort button](critique/i4b.jpg)
 
 # (b) Proposed design
 
