@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["critique/a1.jpg","critique/a1circle.jpg","critique/a1square.jpg","critique/a2a.jpg","critique/a2b.jpg","critique/a2c.jpg","critique/c2a.jpg","critique/c2b.jpg","critique/c2c.jpg","critique/c3.jpg","critique/c4.jpg","critique/c5.jpg","critique/i2a.jpg","critique/i2b.jpg","critique/i2c.jpg","critique/i2d.jpg","critique/i2e.jpg","critique/i2f.jpg","critique/i3.jpg","critique/i4a.jpg","critique/i4b.jpg","dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","images/TheDataViz.jpg"]}
+  {"type":"character","attributes":{},"value":["critique/a1.jpg","critique/a1circle.jpg","critique/a1square.jpg","critique/a2a.jpg","critique/a2b.jpg","critique/a2c.jpg","critique/c2a.jpg","critique/c2b.jpg","critique/c2c.jpg","critique/c3.jpg","critique/c4.jpg","critique/c5.jpg","critique/c6.jpg","critique/i2.jpg","critique/i2a.jpg","critique/i2b.jpg","critique/i2c.jpg","critique/i2d.jpg","critique/i2e.jpg","critique/i2f.jpg","critique/i2g.jpg","critique/i2h.jpg","critique/i2i.jpg","critique/i2j.jpg","critique/i2k.jpg","critique/i2l.jpg","critique/i3.jpg","dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","images/TheDataViz.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2140,8 +2140,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <figure>
 <img src="critique/c5.jpg" alt="Line graphs sorted in descending order" /><figcaption aria-hidden="true">Line graphs sorted in descending order</figcaption>
 </figure>
-<h3 id="different-data-aggregation-in-map-and-line-graphs">6) Different data aggregation in map and line graphs</h3>
-<p>The map displays the total number of armed conflicts in the six years, whereas the line graphs display the annual number of armed conflicts over the six years. As the data aggregation is different, the audience is unable to visualise the combined effect of the spatio pattern and temporal pattern of the data, i.e. cannot tell what is the trend of armed conflict events over time of a specific region of the country.</p>
+<h3 id="different-data-aggregation-does-not-support-spatio-temporal-analysis">6) Different data aggregation does not support spatio-temporal analysis</h3>
+<p>The map view shows the <strong>spatio patterns</strong> of armed conflicts as a <strong>total of the six years</strong>, whereas the line graphs show the <strong>temporal patterns</strong> of the <strong>annual number</strong> of armed conflicts <strong>over the six years</strong>. As the data aggregation is different, the audience is unable to draw the relationship between the spatio pattern and temporal pattern of the data from the visualisation, i.e. cannot tell what is the trend of armed conflict events over time of a specific region of the country.</p>
+<figure>
+<img src="critique/c6.jpg" alt="Different data aggregation in the two views" /><figcaption aria-hidden="true">Different data aggregation in the two views</figcaption>
+</figure>
 <h2 id="aesthetics">Aesthetics</h2>
 <h3 id="issues-with-shape-encoding-on-map">1) Issues with shape encoding on map</h3>
 <p>There is shape encoding in the map visualisation, however, the size of the data points is too small for the audience to make out the shape unless one scrutinises the data points or has a sharp eye for details. The size of the data points remain unchanged even after zooming in.</p>
@@ -2176,8 +2179,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <h2 id="interactivity">Interactivity</h2>
 <h3 id="different-views-allowing-multi-dimensional-analysis">1) Different views allowing multi-dimensional analysis</h3>
 <p>The visualisation shows two different views of the data on screen: map and line graphs. This allows for user interaction with the two graphs and easy comparison of data between the two views (though limited, as discussed earlier under the clarity criterion).</p>
-<h3 id="limited-data-and-view-specification-capabilities">2) Limited data and view specification capabilities</h3>
-<p>Both views provide the mouse-over view and selection functions (pointer and drag-box) to view more information, and the map view provides basic map interaction such as zoom, pan and added selection functions of radial and lasso selections. The features and usability of the interactivity will be discussed in detail next.</p>
+<h3 id="limited-interactive-capabilities">2) Limited interactive capabilities</h3>
+<p>Both views provide navigation to view low-level detail (i.e. tooltip information) and selection functions (pointer and drag-box) to highlight data points of interest. There is a filter function to allow analysis of the data by country of interest and users are also able to highlight data by event types. The map view provides basic map interaction such as zoom, pan and added selection functions of radial and lasso selections. The line graphs view has the sorting function, which was discussed earlier under the clarity criterion.</p>
+<figure>
+<img src="critique/i2.jpg" alt="Interactive tools shown in the visualisation" /><figcaption aria-hidden="true">Interactive tools shown in the visualisation</figcaption>
+</figure>
+<p>The features and usability of the interactivity will be discussed in more detail next.</p>
 <h4 id="a-added-tooltip-with-drag-box-selection-not-useful-for-map-view">A) Added tooltip with drag-box selection not useful for map view</h4>
 <figure>
 <img src="critique/i2a.jpg" alt="Tooltip information for drag-box selection does not make sense" /><figcaption aria-hidden="true">Tooltip information for drag-box selection does not make sense</figcaption>
@@ -2201,22 +2208,43 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>This sorting feature and its output create confusion to the user due to the following:</p>
 <ul>
 <li>Chart type changes to a bar chart: data shown is the same, but user is required to switch from perceiving lines graphs to bar graphs</li>
-<li>Year order for the selected years changes: order does not make sense, even when compared to bar charts. The change is also subtle and might go undetected</li>
+<li>Year order for the selected years changes: order does not make sense, even when user tries to decipher from the bar graphs. The change is also subtle and might go undetected</li>
 </ul>
 <p>In addition, the selection function changes to a radial selection after sorting was done, and there is no option for user to switch to other selection options on the line graphs.</p>
 <figure>
 <img src="critique/i2f.jpg" alt="Radial selection option after clicking on the descending sort button" /><figcaption aria-hidden="true">Radial selection option after clicking on the descending sort button</figcaption>
 </figure>
-<h3 id="limited-coordinated-view">3) Limited coordinated view</h3>
+<h4 id="d-filter-feature-is-flexible">D) Filter feature is flexible</h4>
+<p>The visualisation allows user to filter the data displayed by all countries or a specific country. The map view corresponds to the filter selection, i.e. the map pans to the country that is being selected. For example, the map view pans to show the entire region when <em>(All)</em> is selected. The data in the line graphs also changes, as can be seen by the change in the y-axis range.</p>
 <figure>
-<img src="critique/i3.jpg" alt="Radial selection option after clicking on the descending sort button" /><figcaption aria-hidden="true">Radial selection option after clicking on the descending sort button</figcaption>
+<img src="critique/i2g.jpg" alt="Data shown in map and line graphs updates when the data is filtered by (All)" /><figcaption aria-hidden="true">Data shown in map and line graphs updates when the data is filtered by <em>(All)</em></figcaption>
 </figure>
-<h3 id="country-filtering">4) Country filtering</h3>
+<p>The filter function also allows for filtering by multiple countries, although this requires some exploration on the part of the user. Notice that the map view now pans to show the area that covers the selected countries only.</p>
 <figure>
-<img src="critique/i4a.jpg" alt="Radial selection option after clicking on the descending sort button" /><figcaption aria-hidden="true">Radial selection option after clicking on the descending sort button</figcaption>
+<img src="critique/i2h.jpg" alt="Multiple countries filter" /><figcaption aria-hidden="true">Multiple countries filter</figcaption>
 </figure>
+<p>The multiple selection of countries is achieved by clicking on the dropdown arrow on the <em>Country</em> filter and selecting <em>Multiple Values (list)</em>, as shown below. The user can also choose to perform filter by inclusion or exclusion.</p>
 <figure>
-<img src="critique/i4b.jpg" alt="Radial selection option after clicking on the descending sort button" /><figcaption aria-hidden="true">Radial selection option after clicking on the descending sort button</figcaption>
+<img src="critique/i2i.jpg" alt="Able to change filter parameters from the dropdown arrow in the Country filter" /><figcaption aria-hidden="true">Able to change filter parameters from the dropdown arrow in the <em>Country</em> filter</figcaption>
+</figure>
+<p>It was observed that the line graphs are designed to show total values by event types based on the country filter. This means that the line graphs do not support comparison of event types across countries, should the user want to compare between countries.</p>
+<h4 id="e-highlighting-draws-attention-to-selected-records">E) Highlighting draws attention to selected records</h4>
+<p>The highlighting feature is useful to view the data points for selected event types, especially in the map view. As seen from the diagram below, selecting <em>Strategic development</em> on the <em>Event Type</em> colour legend highlights the corresponding data points on the map and the line graph, and the other data are “greyed out”.</p>
+<figure>
+<img src="critique/i2j.jpg" alt="Selecting Strategic development on Event Type legend highlights corresponding data points on map and line graph" /><figcaption aria-hidden="true">Selecting <em>Strategic development</em> on Event Type legend highlights corresponding data points on map and line graph</figcaption>
+</figure>
+<p>However, as the data points on the map are opaque and overlap with each other, it is difficult to make comparison between event types on the map view (as mentioned earlier under the clarity criterion). The following diagram showing the selection of <em>Battles</em> and <em>Strategic development</em> further reinforces this difficulty.</p>
+<figure>
+<img src="critique/i2k.jpg" alt="Battles data points on map cover the Strategic development data points on the map, as compared to previous diagram" /><figcaption aria-hidden="true"><em>Battles</em> data points on map cover the <em>Strategic development</em> data points on the map, as compared to previous diagram</figcaption>
+</figure>
+<p>Another point to note is that the order of the line graphs and the order of the event type legend are not aligned for <em>Violence against civilians</em>, <em>Protests</em> and <em>Riots</em> event types. This is counter-intuitive to the user in perceiving the sequence of the line graph with reference to the legend, and vice versa.</p>
+<figure>
+<img src="critique/i2l.jpg" alt="Sequence order of line graphs differs from Event Type legend" /><figcaption aria-hidden="true">Sequence order of line graphs differs from Event Type legend</figcaption>
+</figure>
+<h3 id="no-coordinated-highlighting-between-the-two-views">3) No coordinated highlighting between the two views</h3>
+<p>Although the visualisation places the map and line graphs side-by-side, the two views are not coordinated. Selecting data points in one view does not highlight the corresponding data points in the other view. The diagram below shows the selection of all the 2016 data points in the line graphs, but the 2016 data points are not highlighted in the map view.</p>
+<figure>
+<img src="critique/i3.jpg" alt="Selecting data points in line graph for 2016 does not change the display of data points in the map view" /><figcaption aria-hidden="true">Selecting data points in line graph for 2016 does not change the display of data points in the map view</figcaption>
 </figure>
 <h1 id="b-proposed-design">(b) Proposed design</h1>
 <h1 id="c-final-product-of-proposed-visualisation">(c) Final product of proposed visualisation</h1>
