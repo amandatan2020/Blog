@@ -123,11 +123,11 @@ As the colour scales are only used in the map, the audience need to trace horizo
 
 ### 1) Different views allowing multi-dimensional analysis
 
-The visualisation shows two different views of the data on screen: map and line graphs. This allows for user interaction with the two graphs and easy comparison of data between the two views (though limited, as discussed earlier under the clarity criterion). 
+The visualisation shows two different views of the data on screen: map and line graphs. This allows for interaction with the two graphs and easy comparison of data between the two views (though limited, as discussed earlier under point 6 of the clarity criterion). 
 
 ### 2) Limited interactive capabilities
 
-Both views provide navigation to view low-level detail (i.e. tooltip information) and selection functions (pointer and drag-box) to highlight data points of interest. There is a filter function to allow analysis of the data by country of interest and users are also able to highlight data by event types. The map view provides basic map interaction such as zoom, pan and added selection functions of radial and lasso selections. The line graphs view has the sorting function, which was discussed earlier under the clarity criterion. 
+Both views provide navigation to view low-level detail (i.e. tooltip information) and selection functions (pointer and drag-box) to highlight data points of interest. There is a filter function to allow analysis of the data by country of interest and users are also able to highlight data by event types. The map view provides basic map interaction such as zoom, pan and added selection functions of radial and lasso selections. The line graphs view has the sorting function, which was discussed earlier under point 5 of the clarity criterion. 
 
 ![Interactive tools shown in the visualisation](critique/i2.jpg)
 
@@ -189,7 +189,7 @@ The highlighting feature is useful to view the data points for selected event ty
 
 ![Selecting *Strategic development* on Event Type legend highlights corresponding data points on map and line graph](critique/i2j.jpg)
 
-However, as the data points on the map are opaque and overlap with each other, it is difficult to make comparison between event types on the map view (as mentioned earlier under the clarity criterion). The following diagram showing the selection of *Battles* and *Strategic development* further reinforces this difficulty.
+However, as the data points on the map are opaque and overlap with each other, it is difficult to make comparison between event types on the map view (as mentioned earlier under point 2 of the clarity criterion). The following diagram showing the selection of *Battles* and *Strategic development* further reinforces this difficulty.
 
 ![*Battles* data points on map cover the *Strategic development* data points on the map, as compared to previous diagram](critique/i2k.jpg)
 
