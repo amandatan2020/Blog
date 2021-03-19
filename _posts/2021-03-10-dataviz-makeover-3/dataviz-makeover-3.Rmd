@@ -218,24 +218,21 @@ In general, the map and line graphs design is retained to show the spatio and te
 | Aesthetics: Colour scale not employed across graphs | - Align use of colour encoding in proportional symbol map and line graphs | - Allow quicker and more intuitive comparison across graphs |
 | Interactivity: No coordinated highlighting between the two views <br> Possible interactivity not upfront and requires exploration by user <br><br> | - Line graphs placed below proportional symbol map <br> - Interactive options for each graph to be more upfront <br><br>| - Clear demarcation of the two graphs as separate graphs <br> - Able to know what are the possible interactivity available/useful for the visualisation |
 
-A sketch of the proposed design is shown below.
-![Sketch of proposed design](images/sketch.jpg){width=80%}
-
 # (c) Final product of proposed visualisation
 
-The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found [here]().
+The proposed visualisation is designed using Tableau and uploaded on Tableau Public. The link can be found [here](https://public.tableau.com/views/DataViz_Makeover_03_Tableau/Dashboard1?:language=en&:display_count=y&:origin=viz_share_link).
 
 # (d) Step-by-step description to prepare the final product
 
 ### 1. Import file into Tableau
 
-Upon opening Tableau, click on **More...**, go to the directory containing the data file, select the file and click **Open**.
+Upon opening Tableau, click on *More...*, go to the directory containing the data file, select the file and click *Open*.
 
 ![Import file into Tableau](guide/001.jpg){width=80%}
 
 ### 2. Check variables data type
 
-At the **Data Source** tab, check through the data types of each variable and change the data type where necessary. The table below lists the affected variables.
+At the *Data Source* tab, check through the data types of each variable and change the data type where necessary. The table below lists the affected variables.
 
 |Variable|Data Type|
 |--------|---------|
@@ -248,13 +245,13 @@ At the **Data Source** tab, check through the data types of each variable and ch
 
 The following steps were taken to change the data type of **Year**:
 
-1. Go to the icon at the top left corner of the header cell containing the variable **Year**
+1. Go to the icon at the top left corner of the header cell containing the variable **Year**.
 
-![](guide/002.jpg)
+![](guide/002.jpg){width=80%}
 
-2. Click and select the desired data type, i.e. **Date** for **Year** variable
+2. Click and select the desired data type, i.e. *Date* for **Year** variable.
 
-![](guide/003.jpg)
+![](guide/003.jpg){width=80%}
 
 The above steps are repeated for the remaining variables.
 
@@ -268,39 +265,39 @@ The following variables are renamed for easy understanding:
 |Admin2| County-level|
 |Admin3| City-level|
 
-The rename is done by selecting **Rename** under the dropdown arrow at the top right corner of the header cell containing the variable, as shown below.
+The rename is done by selecting *Rename* under the dropdown arrow at the top right corner of the header cell containing the variable, as shown below.
 
 ![](guide/003-1.jpg)
 
 ### 4. Filter to only select data between 2015 ad 2020
 
-Keeping to the same range of data as the original visualisation, the filter need to be done at the **Data Source** tab so that the user will not be able to change the year range beyond 2015 to 2020 when interacting with the visualisation. The steps taken are:
+Keeping to the same range of data as the original visualisation, the filter need to be done at the *Data Source* tab so that the user will not be able to change the year range beyond 2015 to 2020 when interacting with the visualisation. The steps taken are:
 
-1. At the top right corner of the **Data Source** tab, click on **Add**
+1. At the top right corner of the *Data Source* tab, click on *Add*.
 
 ![](guide/003a.jpg)
 
-2. At the *Edit Data Source Filters* pop-up window, click on **Add...**
+2. At the *Edit Data Source Filters* pop-up window, click on *Add...*.
 
-![](guide/003b.jpg)
+![](guide/003b.jpg){width=50%}
 
-3. At the *Add Filter* pop-up window, select **Event Date** and click **OK**
+3. At the *Add Filter* pop-up window, select *Event Date* and click *OK*.
 
-![](guide/003c.jpg)
+![](guide/003c.jpg){width=50%}
 
-4. At the *Filter Field [Filter Field [Event Date]]* pop-up window, select **Years** and click **Next >**
+4. At the *Filter Field [Filter Field [Event Date]]* pop-up window, select *Years* and click *Next >*.
 
-![](guide/003d.jpg)
+![](guide/003d.jpg){width=50%}
 
-5. At the *Filter [Year of Event Date]* pop-up window, check the boxes for **2015**, **2016**, **2017**, **2018**, **2019** and **2020**, and click **OK**
+5. At the *Filter [Year of Event Date]* pop-up window, check the boxes for **2015**, **2016**, **2017**, **2018**, **2019** and **2020**, and click *OK*.
 
-![](guide/003e.jpg)
+![](guide/003e.jpg){width=50%}
 
-6. At the *Edit Data Source Filters* window, check the filter added and click **OK**
+6. At the *Edit Data Source Filters* window, check the filter added and click *OK*.
 
-![](guide/003f.jpg)
+![](guide/003f.jpg){width=50%}
 
-7. Back at the **Data Source** tab, notice that a filter has been added at the top right corner of the screen
+7. Back at the *Data Source* tab, notice that a filter has been added at the top right corner of the screen.
 
 ![](guide/003g.jpg)
 
@@ -308,61 +305,61 @@ Keeping to the same range of data as the original visualisation, the filter need
 
 Hierarchy is added for variables with geographic roles. This is done for easy reference to the variables. The steps taken are as follows:
 
-1. Select all variables with geographic roles, right-click and select **Hierarchy/Create Hierarchy...**
+1. Select all variables with geographic roles, right-click and select *Hierarchy/Create Hierarchy...*.
 
-![](guide/004.jpg)
+![](guide/004.jpg){width=80%}
 
-2. At the pop-up window, enter the name of the hierarhcy, i.e. **Map**, and click **OK**
+2. At the pop-up window, enter the name of the hierarhcy, i.e. *Map*, and click *OK*.
 
-![](guide/005.jpg)
+![](guide/005.jpg){width=80%}
 
-3. Click-and-drag the variables to reorder them in the following order: Region -> Country -> State/Province -> County-level -> City-level -> Location
+3. Click-and-drag the variables to reorder them in the following order: Region -> Country -> State/Province -> County-level -> City-level -> Location.
 
-![](guide/006.jpg)
+![](guide/006.jpg){width=80%}
 
 ### 6. Create the base proportional symbol map
 
-1. Click and drag **Country** to the plot area as shown below
+1. Click and drag **Country** to the plot area as shown below.
 
 ![](guide/007.jpg)
 
-2. Click on the **+** button beside **Country** to expand the hierarchy till the end. Note that the map changes with each expansion to show the data for each hierarchy level.
+2. Click on the *+* button beside **Country** to expand the hierarchy till the end. Note that the map changes with each expansion to show the data for each hierarchy level.
 
 ![](guide/008.jpg)
 
-After expanding, it was noted that there are more than 6K data points with unknown geogrpahic locations.
+After expanding, it was noted that there are more than 6K data points with unknown geographic locations.
 
 ![](guide/008a.jpg)
 
 After investigation, it was found that Tableau does not recognise some **City** and **State/Province** values for some countries, based on the latitude and longitude values generated by Tableau. As such, the map needs to be based on the latitude and longitude values provided in the dataset.
 
-3. Clear the plot area by right-clicking and selecting **Remove** for each variable used for the plot
+3. Clear the plot area by right-clicking and selecting *Remove* for each variable used for the plot.
 
 ![](guide/008b.jpg)
 
-4. Convert **Latitude** and **Longitude** from *Measures* to *Dimensions*
+4. Convert **Latitude** and **Longitude** from *Measures* to *Dimensions*.
 
 ![](guide/008c.jpg)
 
-5. Click-and-drag **Latitude** to *Rows* and **Longitude** to *Columns*
+5. Click-and-drag **Latitude** to *Rows* and **Longitude** to *Columns*.
 
 ![](guide/008d.jpg)
 
 Notice that there are more data points shown on the map and no more indicator of unknown geographic values! We can continue our journey to create the proportional symbol map now.
 
-6. Click and drag **Sheet1(Count)** to **Size**
+6. Click and drag **Sheet1(Count)** to *Size*.
 
 ![](guide/009.jpg)
 
-4. Click **Color** and select **Opacity** to be **70%** and change the **Border** to medium-grey
+4. Click *Color* and select *Opacity* to be **70%** and change the *Border* to medium-grey.
 
 ![](guide/010.jpg)
 
-5. Click **Size** and resize the circles to be larger, so that users can easily see them
+5. Click *Size* and resize the circles to be larger, so that users can easily see them.
 
 ![](guide/010a.jpg)
 
-6. Click and drag **Event Type** to **Color**
+6. Click and drag **Event Type** to *Color*.
 
 ![](guide/011.jpg)
 
@@ -372,27 +369,27 @@ And the base proportional symbol map is done!
 
 ### 6. Adding filters to the proportional symbol map
 
-1. Click and drag **Country** to **Filters**
+1. Click and drag **Country** to *Filters*.
 
 ![](guide/012.jpg)
 
-2. At the *Filter [Country]* pop-up window, click **OK**
+2. At the *Filter [Country]* pop-up window, click *OK*.
 
-![](guide/013.jpg)
+![](guide/013.jpg){width=50%}
 
-3. Click and drag **Event Date** to **Filters**
+3. Click and drag **Event Date** to *Filters*.
 
 ![](guide/014.jpg)
 
-4. At the *Filter Field [Event Date]* pop-up window, check that **Range of Dates** is selected and click **Next >**
+4. At the *Filter Field [Event Date]* pop-up window, check that *Range of Dates* is selected and click *Next >*.
 
-![](guide/015.jpg)
+![](guide/015.jpg){width=50%}
 
-5. At the *Filter [Event Date]* pop-up window, click **OK**
+5. At the *Filter [Event Date]* pop-up window, click *OK*.
 
 ![](guide/016.jpg)
 
-6. At the *Filters* card, click the **Country** dropdown arrow and select **Show Card**. Repeat this step for the other filter **Event Date**.
+6. At the *Filters* card, click the **Country** dropdown arrow and select *Show Card*. Repeat this step for the other filter **Event Date**.
 
 ![](guide/019.jpg)
 
@@ -404,31 +401,31 @@ After some cosmetic changes such as editing the filter titles, re-ordering the f
 
 From the proportional symbol map above, it is not clear where the country borders are and the position of some data points near the borders. As such, we will add in another marks layer to demarcate the map area for each South-east Asian country.
 
-1. Right-click **Country** and select **Add to New Layer**
+1. Right-click **Country** and select *Add to New Layer*.
 
-![](guide/021.jpg)
+![](guide/021.jpg){width=50%}
 
-2. Click-and-drag **Country** layer to after **Latitude** layer, so that the data points layer will be above the land area layer
+2. Click-and-drag **Country** layer to after **Latitude** layer, so that the data points layer will be above the land area layer.
 
 ![](guide/022.jpg)
 
-3. Click the dropdown list and select **Map**
+3. Click the dropdown list and select *Map*.
 
 ![](guide/023.jpg)
 
-4. Click-and-drag **Country** details to **Color**
+4. Click-and-drag **Country** details to *Color*.
 
 ![](guide/024.jpg)
 
-5. Click on **Color** then **Edit Color**, change all countries to *Light Pink #DAB6AF* under the *Winter* color palette, and click **OK**
+5. Click on *Color* then *Edit Color*, change all countries to *Light Pink #DAB6AF* under the *Winter* color palette, and click *OK*.
 
-![](guide/025.jpg)
+![](guide/025.jpg){width=50%}
 
-6. Click on **Color** to adjust the opacity to **2%** and change the border color to white
+6. Click on *Color* to adjust the opacity to **2%** and change the border color to white.
 
 ![](guide/026.jpg)
 
-7. Remove the **Country** legend by hiding the card
+7. Remove the **Country** legend by hiding the card.
 
 ### 8. Customise the proportional symbol map tooltip
 
@@ -441,33 +438,33 @@ There are two tooltips to create, one for the **Latitude** mark layer and the ot
 
 #### Tooltip for **Latitude** mark layer
 
-1. Convert **Interaction** to dimension by right-clicking and selecting *Convert to Dimension*
+1. Convert **Interaction** to dimension by right-clicking and selecting *Convert to Dimension*.
 
 ![](guide/027.jpg)
 
-2. Edit **Interaction** aliases to display text instead of numbers by selecting *Aliases...* and entering the corresponding text provided in the ACLED codebook
+2. Edit **Interaction** aliases to display text instead of numbers by selecting *Aliases...* and entering the corresponding text provided in the ACLED codebook [here](https://acleddata.com/resources/general-guides/). Note that the text for code **70** is not provided in the codebook. However, based on the pattern of the coding, it can be derived as civilians acting on their own.
 
 ![](guide/028.jpg)
 
-![](guide/029.jpg)
+![](guide/029.jpg){width=50%}
 
-3. Add **Country**, **State/Province**, **Location**, **Event Type**, **Sub Event Type**, **Interaction** and **Fatalities** to *Detail*
+3. Add **Country**, **State/Province**, **Location**, **Event Type**, **Sub Event Type**, **Interaction** and **Fatalities** to *Detail*.
 
 ![](guide/030.jpg)
 
-4. Next we create the required charts for the tooltip by clicking on the *New Worksheet* button near the bottom of the screen
+4. Next we create the required charts for the tooltip by clicking on the *New Worksheet* button near the bottom of the screen.
 
 ![](guide/031.jpg)
 
-5. Rename the new worksheet to *SubEventChart*, and drag **Sheet1(Count)** to *Columns* and **Sub Event Type** to *Rows*
+5. Rename the new worksheet to *SubEventChart*, and drag **Sheet1(Count)** to *Columns* and **Sub Event Type** to *Rows*.
 
 ![](guide/032.jpg)
 
-6. Click on the button shown to sort in descending order
+6. Click on the button shown to sort in descending order.
 
 ![](guide/033.jpg)
 
-7. Next, we resize the chart and do some formatting of the axis font size
+7. Next, we resize the chart and do some formatting of the axis font size.
 
 ![](guide/034.jpg)
 
@@ -479,31 +476,31 @@ There are two tooltips to create, one for the **Latitude** mark layer and the ot
 
 ![](guide/035.jpg)
 
-10. To create the third chart, renamed as *EventTimeChart*, drag **Year** to *Columns*, and **Event Type** and **Sheet1(Count)** to *Rows*. Under *Show Me* at the right of the screen, select the *lines (continuous)* graph
+10. To create the third chart, renamed as *EventTimeChart*, drag **Year** to *Columns*, and **Event Type** and **Sheet1(Count)** to *Rows*. Under *Show Me* at the right of the screen, select the *lines (continuous)* graph.
 
 ![](guide/036.jpg)
 
-11. Edit the axis titles as needed as right-clicking on the axis and selecting *Edit Axis*
+11. Edit the axis titles as needed as right-clicking on the axis and selecting *Edit Axis*.
 
-![](guide/038.jpg)
+![](guide/038.jpg){width=50%}
 
-12. At the *Tick Marks* tab for the y-axis, remove the minor tick marks by selecting *None*
+12. At the *Tick Marks* tab for the y-axis, remove the minor tick marks by selecting *None*.
 
-![](guide/037.jpg)
+![](guide/037.jpg){width=50%}
 
 13. Resize and format as necessary and the third chart is completed!
  
 ![](guide/039.jpg)
 
-14. At the main worksheet under the **Location** *Marks* layer, check that **Interaction**, **Sub Event Type** and **(SUM)Fatalities** are under the *Detail*, and **Country**, **State/Province**, **Location** and **Event Type** are under the *Tooltip* in the *Marks* card
+14. At the main worksheet under the **Location** *Marks* layer, check that **Interaction**, **Sub Event Type** and **(SUM)Fatalities** are under the *Detail*, and **Country**, **State/Province**, **Location** and **Event Type** are under the *Tooltip* in the *Marks* card.
 
 ![](guide/040.jpg)
 
-15. Click on *Tooltip* in the *Marks* card. Click on *Insert* and select the charts from *Sheets* and the other variables as shown above
+15. Click on *Tooltip* in the *Marks* card. Click on *Insert* and select the charts from *Sheets* and the other variables as shown above.
 
 16. The *Edit Tooltip* should look like this:
 
-![](guide/041.jpg)
+![](guide/041.jpg){width=80%}
 
 17. The tooltip for the **Location** layer should look like this:
 
@@ -511,44 +508,44 @@ There are two tooltips to create, one for the **Latitude** mark layer and the ot
 
 #### Tooltip for **Country** mark layer
 
-1. Create a new worksheet to draw the needed chart
-2. Click-and-drag **Event Type** and **Year** to *Columns*, and **Sheet1(Count)** to *Rows*. Click *Show Me* and select the *stacked bars* graph
+1. Create a new worksheet to draw the needed chart.
+2. Click-and-drag **Event Type** and **Year** to *Columns*, and **Sheet1(Count)** to *Rows*. Click *Show Me* and select the *stacked bars* graph.
 
 ![](guide/043.jpg)
 
-3. Under **CNT(Sheet1)** dropdown list, go to *Quick Table Calculation* and select *Percent of Total*
+3. Under **CNT(Sheet1)** dropdown list, go to *Quick Table Calculation* and select *Percent of Total*.
 
 ![](guide/044.jpg)
 
-4. Click on the **CNT(Sheet1)** dropdown list again, go to *Compute Using* and select *Event Type*
+4. Click on the **CNT(Sheet1)** dropdown list again, go to *Compute Using* and select *Event Type*.
 
 ![](guide/045.jpg)
 
-5. Rename the worksheet to *CountryEventTime*, edit the formatting and axis titles, and resize the chart to obtain the graph below
+5. Rename the worksheet to *CountryEventTime*, edit the formatting and axis titles, and resize the chart to obtain the graph below.
 
 ![](guide/045a.jpg)
 
-6. Create another worksheet named *CountryDetails* with **Country** and **Event Type** in *Rows*. Click-and-drag **Fatalities** and **Sheet1(Count)** to the *Abc* column formed in the plot area, as shown below
+6. Create another worksheet named *CountryDetails* with **Country** and **Event Type** in *Rows*. Click-and-drag **Fatalities** and **Sheet1(Count)** to the *Abc* column formed in the plot area, as shown below.
 
 ![](guide/046.jpg)
 
-7. Right-click the **Country** column in the table and un-select *Show Header* to remove the country labels. Then, right-click **Count of Sheet1** and select *Edit Alias...* to rename the column to **Events**
+7. Right-click the **Country** column in the table and un-select *Show Header* to remove the country labels. Then, right-click **Count of Sheet1** and select *Edit Alias...* to rename the column to **Events**.
 
 ![](guide/047.jpg)
 
-8. To make the numbers bigger, right-click on the table and select *Format*. Click on *Fields* and select *Measure Values*
+8. To make the numbers bigger, right-click on the table and select *Format*. Click on *Fields* and select *Measure Values*.
 
 ![](guide/048.jpg)
 
-9. Under *Default* *Font*, change the size and make the font in boldface
+9. Under *Default* *Font*, change the size and make the font in boldface.
 
 ![](guide/048a.jpg)
 
-10. Under *Default* *Alignment*, select *Middle Center*. Under *Default* *Numbers*, go to *Number (Custom)* and change to zero decimal places
+10. Under *Default* *Alignment*, select *Middle Center*. Under *Default* *Numbers*, go to *Number (Custom)* and change to zero decimal places.
 
 ![](guide/049.jpg)
 
-11. Again, to be consistent with the use of colors for event types, click-and-drag **Event Type** to *Color* in the *Marks* card
+11. Again, to be consistent with the use of colors for event types, click-and-drag **Event Type** to *Color* in the *Marks* card.
 
 ![](guide/049a.jpg)
 
@@ -556,13 +553,13 @@ The final table will look like this:
 
 ![](guide/049b.jpg)
 
-12. Back at the main worksheet under the **Country** *Marks* layer, click-and-drag **Country** to *Tooltip*
+12. Back at the main worksheet under the **Country** *Marks* layer, click-and-drag **Country** to *Tooltip*.
 
 ![](guide/050.jpg)
 
 13. Click on *Tooltip* and make the necessary edits. The *Edit Tooltip* should look like this:
 
-![](guide/051.jpg)
+![](guide/051.jpg){width=80%}
 
 14. The tooltip for the **Country** layer should look like this:
 
@@ -572,17 +569,17 @@ The final table will look like this:
 
 To make it clear to the user that the visualisation is for South-east Asia countries only, it is important to add a title to the visualisation. It would also be helpful for the title to show the user which country and time period are being filtered. As adding the exact dates in the title would add more visual clutter than good information, only the year of the filtered period would be shown. The steps taken to add a dynamic title are:
 
-1. Click-and-drag **Year** to *Detail* in the **Location** *Marks* layer card
+1. Click-and-drag **Year** to *Detail* in the **Location** *Marks* layer card.
 
 ![](guide/053.jpg)
 
-2. Double-click on **Sheet 1** and the following pop-up window will appear
+2. Double-click on *Sheet 1* and the following pop-up window will appear.
 
 ![](guide/054.jpg)
 
-3. The title is edited as shown below. **<Country>** and **<YEAR(Year)>** are added by selecting the corresponding measures under *Insert*
+3. The title is edited as shown below. **<Country>** and **<YEAR(Year)>** are added by selecting the corresponding measures under *Insert*.
 
-![](guide/055.jpg)
+![](guide/055.jpg){width=80%}
 
 4. The final proportional symbol map is done!
 
@@ -590,19 +587,19 @@ To make it clear to the user that the visualisation is for South-east Asia count
 
 ### 10. Create the line graphs
 
-1. Create a new worksheet, and click-and-drag **Event Date** to *Columns* and **Sheet1(Count)** to *Rows*
+1. Create a new worksheet, and click-and-drag **Event Date** to *Columns* and **Sheet1(Count)** to *Rows*.
 
 ![](guide/057.jpg)
 
-2. Click-and-drag **Event Type** to the area between the x-axis title and the plot area until a dotted line appears, as shown in the figure below
+2. Click-and-drag **Event Type** to the area between the x-axis title and the plot area until a dotted line appears, as shown in the figure below.
 
 ![](guide/058.jpg)
 
-3. Click-and-drag **Country** to *Detail* in the *Marks* card
+3. Click-and-drag **Country** to *Detail* in the *Marks* card.
 
 ![](guide/059.jpg)
 
-4. To be consistent with the usage of colours for event types, click-and-drag **Event Type** to *Color* in the *Marks* card
+4. To be consistent with the usage of colours for event types, click-and-drag **Event Type** to *Color* in the *Marks* card.
 
 ![](guide/060.jpg)
 
@@ -616,7 +613,7 @@ As such, let us change to encode **Country** with colour.
 
 ![](guide/062.jpg)
 
-6. To make the countries differentiated by colour, click on *Color*, *Edit Colors...*, choose the *Nuriel Stone* colour palette, click *Assign Palette* and click *OK*
+6. To make the countries differentiated by colour, click on *Color*, *Edit Colors...*, choose the *Nuriel Stone* colour palette, click *Assign Palette* and click *OK*.
 
 ![](guide/063.jpg)
 
@@ -624,35 +621,35 @@ When we navigate to the proportional symbol map worksheet, notice that the colou
 
 ![](guide/063a.jpg)
 
-7.Click-and-drag **Country** to *Label* in the *Marks* card, so as to clearly label the countries
+7.Click-and-drag **Country** to *Label* in the *Marks* card, so as to clearly label the countries.
 
 ![](guide/064.jpg)
 
-8. Click on *Label*, *Font* and change the font to size *8*, *boldface* and *Match Mark Color*
+8. Click on *Label*, *Font* and change the font to size *8*, *boldface* and *Match Mark Color*.
 
 ![](guide/065.jpg)
 
-9. As the y-axis range is very wide due to the Philippines high number of violence against civilians, right-click the y-axis and select *Edit Axis...* to change the y-axis to a log scale
+9. As the y-axis range is very wide due to the Philippines high number of violence against civilians, right-click the y-axis and select *Edit Axis...* to change the y-axis to a log scale.
 
 ![](guide/066.jpg)
 
-10. At the *Edit Axis [Count of Sheet1]* pop-up window, change the Scale to *Logarithmic* *Symmetric*, and change the Range to *Fixed* with the starting point at *0*. Edit the Axis Title to *Count*
+10. At the *Edit Axis [Count of Sheet1]* pop-up window, change the Scale to *Logarithmic* *Symmetric*, and change the Range to *Fixed* with the starting point at *0*. Edit the Axis Title to *Count*.
 
-![](guide/066a.jpg)
+![](guide/066a.jpg){width=50%}
 
-11. As we cannot tell the years on the x-axis, right-click the x-axis and select *Rotate Label*
+11. As we cannot tell the years on the x-axis, right-click the x-axis and select *Rotate Label*.
 
 ![](guide/066b.jpg)
 
-12. Remove the x-axis title at the top by right-clicking and selecting *Hide Field Labels for Columns*
+12. Remove the x-axis title at the top by right-clicking and selecting *Hide Field Labels for Columns*.
 
 ![](guide/067.jpg)
 
-13. To make it easier for the user to match the y-axis value to the graph contents on the right, we will add a dual axis for the same Count. Click-and-drag **Sheet1(Count)** to the right of the plot until a dotted line appears
+13. To make it easier for the user to match the y-axis value to the graph contents on the right, we will add a dual axis for the same Count. Click-and-drag **Sheet1(Count)** to the right of the plot until a dotted line appears.
 
 ![](guide/068.jpg)
 
-14. Right-click the y-axis that just appeared and select *Synchronize Axis*
+14. Right-click the y-axis that just appeared and select *Synchronize Axis*.
 
 ![](guide/069.jpg)
 
@@ -662,7 +659,7 @@ When we navigate to the proportional symbol map worksheet, notice that the colou
 
 ... and clearing off the text highlighted in the figure below.
 
-![](guide/071.jpg)
+![](guide/071.jpg){width=50%}
 
 The base line graph is completed!
 
@@ -670,39 +667,39 @@ The base line graph is completed!
 
 ### 11. Add chart title and reference lines to the line graphs
 
-1. To add chart title, double-click on *Sheet 9* and key in *South-east Asia Armed Conflict by Event Type over Time*
+1. To add chart title, double-click on *Sheet 9* and key in *South-east Asia Armed Conflict by Event Type over Time*.
 
 ![](guide/072.jpg)
 
-2. To add reference line, right-click on any of the y-axis and select *Add Reference Line*
+2. To add reference line, right-click on any of the y-axis and select *Add Reference Line*.
 
 ![](guide/073.jpg)
 
-3. At the *Add Reference Line, Band, or Box* pop-up window, make the following changes as shown in the screen shot below
+3. At the *Add Reference Line, Band, or Box* pop-up window, make the following changes as shown in the screen shot below.
 
 ![](guide/074.jpg)
 
 ### 12. Add the tooltip for the line graphs
 
-1. Click-and-drag **Sheet1(count)** to *Tooltip* in the **All** *Marks* card
+1. Click-and-drag **Sheet1(count)** to *Tooltip* in the **All** *Marks* card.
 
 ![](guide/075.jpg)
 
-2. Click on **CNT(Sheet1)**, go to *Quick Table Calculation* and select *Percent of Total*
+2. Click on **CNT(Sheet1)**, go to *Quick Table Calculation* and select *Percent of Total*.
 
 ![](guide/076.jpg)
 
-3. Click on **CNT(Sheet1)** again, go to *Compute Using* and select *Event Type*
+3. Click on **CNT(Sheet1)** again, go to *Compute Using* and select *Event Type*.
 
 ![](guide/077.jpg)
 
-4. Click on *Tooltip* to open up the *Edit Tooltip* window to edit the contents of the tooltip
+4. Click on *Tooltip* to open up the *Edit Tooltip* window to edit the contents of the tooltip.
 
 ![](guide/078.jpg)
 
-5. Enter the contents as shown in the screen shot below, using the *Insert* button to add dynamic fields
+5. Enter the contents as shown in the screen shot below, using the *Insert* button to add dynamic fields.
 
-![](guide/079.jpg)
+![](guide/079.jpg){width=80%}
 
 The tooltip is done!
 
@@ -714,7 +711,131 @@ As there are calculations in the tooltip, another table is created to check agai
 
 ### 13. Create the dashboard
 
+Next, we will create the dashboard to join the proportional symbol map, line graphs and other chart elements together.
 
+1. Near the bottom of the screen, click on *New Dashboard*.
+
+![](guide/082.jpg)
+
+2. Next, we need to define the size of the dashboard. As we want to place the graphs vertically beside each other, click on *Fixed size* and select *Custom* under *Size* in the *Dashboard* tab on the left.
+
+![](guide/083.jpg)
+
+3. Edit the *Width* and *Height* to **1300px** first. We can make adjustments later if needed. Notice that a scroll bar appears on the right of the screen.
+
+![](guide/084.jpg)
+
+4. Next, we will add the proportional symbol map to the dashboard by clicking-and-dragging it to the *Drop sheets here* area, as shown below.
+
+![](guide/085.jpg)
+
+5. The proportional symbol map with the filters and legend are shown in the dashboard.
+
+![](guide/086.jpg)
+
+6. Then, we add the line graph. Scroll to the bottom of page, click-and-drag *LineGraph* to the area below the map until a grey horizontal box appears, as shown below.
+
+![](guide/087.jpg)
+
+7. The line graph appears below the map. Note that the legend for the country appears on top beside the map.
+
+![](guide/088.jpg)
+
+8. We need to check the display of both graphs in the dashboard and make adjustments. At the map view, select a country e.g. Myanmar to check the map display. Notice that there are a lot of space on both sides of Myanmar in the map.
+
+![](guide/089.jpg)
+
+9. Under *Dashboard* *Size*, change the *Height* to **1500px**, and adjust the size of the map so that the Myanmar map is large enough and fills up most of the map view.
+
+![](guide/090.jpg)
+
+10. On the right column, *Period Range* filter is at the top, which is aesthetically not very pleasing. Click-and-drag a *Blank* object to the area above the filter until a grey box appears, as shown below.
+
+![](guide/091.jpg)
+
+11. Adjust filter and legend objects on the right column until satisfactory.
+
+![](guide/092.jpg)
+
+12. Continue to check the map view for the remaining countries. For Cambodia and Vietnam, the colour chosen is dark, which obscures the country's name and makes it difficult to see the data points. Let us change the colour by right-clicking on the colour legend and select *Edit Colors*.
+
+![](guide/093.jpg)
+
+13. For Cambodia, the colour *#D7CE9F* under *Miller Stone* colour palette is chosen.
+
+![](guide/094.jpg)
+
+14. For Vietnam, the colour *#BFBB60* under *Miller Stone* colour palette is chosen.
+
+![](guide/095.jpg)
+
+15. Coming back to Myanmar, notice that the *Battles* data points are large and still cover up the data points below it. This is because *Battles* are displayed at the top layer due to the sorting order of the event types.
+
+![](guide/096.jpg)
+
+16. Changing the order in one graph would affect all other graphs. To have better visual of the change, go to the *LineGraph* worksheet, click on the dropdown arrow beside **Event Type** and select *Sort...*.
+
+![](guide/097.jpg)
+
+17. At the *Sort [Event Type]* pop-up window, select **Field** under *Sort By* and keep the default values for the other fields.
+
+![](guide/098.jpg){width=50%}
+
+Return to the dashboard sheet and notice that data points of the other event types can now be clearly seen on the map for Myanmar.
+
+Next, we want to make the possible interactions more visible to the user, and inform on the interactions that will affect both the map and line graphs.
+
+18. Click-and-drag a *Vertical* object to the area below the *Country* legend.
+
+![](guide/099.jpg)
+
+19. Notice that a blank box will appear.
+
+![](guide/100.jpg)
+
+20. Next, click-and-drag the **Event Type** legend to the box, as shown below.
+
+![](guide/101.jpg)
+
+21. Then, click-and-drag the **Country** legend to the area within the box that is below the **Event TYpe** legend, as shown below.
+
+![](guide/102.jpg)
+
+22. To create a border for the vertical object encapsulating both the **Event Type** and **Country** legends, click on the *Layout* tab on the left and select the vertical object under *Item hierarchy*. Notice that the vertical box is selected on the dashboard.
+
+![](guide/103.jpg)
+
+23. Under *Border*, select the filled line and set the line thickness to the smallest.
+
+![](guide/104.jpg){width=50%}
+
+24. Next, add some prompters to indicate to the user by clicking-and-dragging the *Text* object to the top of the vertical box, as shown below.
+
+![](guide/105.jpg)
+
+25. The *Edit Text* window will pop up. Change the text as shown in the screen shot below.
+
+![](guide/106.jpg){width=80%}
+
+26. Standardise the wording of the remaining titles for the filters and legend, and make adjustments to the size and position.
+
+![](guide/107.jpg)
+
+27. The final product of the proportional map view and the controls are shown below.
+
+![](guide/108.jpg)
+
+28. Scroll down to check the line graph on the dashboard. The original title given to the graph is too long and adds visual clutter. We shall change it to **Armed Conflict Event by Type**, similar to the original data visualisation.
+
+![](guide/109.jpg)
+
+29. Last, we add the data source to provide information to the user on the data used. This is done by clicking-and-dragging a *Text* object to the bottom of the dashboard.
+
+![](guide/110.jpg)
+
+30. The second half of the dashboard is now complete!
+
+![](guide/111.jpg)
 
 # (e) Major observations revealed by the final product
 
