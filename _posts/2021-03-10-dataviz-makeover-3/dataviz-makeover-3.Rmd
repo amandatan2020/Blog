@@ -269,7 +269,7 @@ The rename is done by selecting *Rename* under the dropdown arrow at the top rig
 
 ![](guide/003.jpg)
 
-### 4. Filter to only select data between 2015 ad 2020
+### 4. Filter to only select data between 2015 and 2020
 
 Keeping to the same range of data as the original visualisation, the filter need to be done at the *Data Source* tab so that the user will not be able to change the year range beyond 2015 to 2020 when interacting with the visualisation. The steps taken are:
 
@@ -535,7 +535,55 @@ The completed tooltip for the **Latitude** layer should look like this:
 
 #### Tooltip for **Country** mark layer
 
-The information to be displayed includes number of events and fatalities by event type and the proportion of event types over the time.
+The information to be displayed includes number of events and fatalities over time and by event type and the proportion of event types over the time.
+
+To create the number of events and fatalities chart over time:
+
+1. Create a new worksheet named *EventFatalities* with **Year** in *Columns*, and **Fatalities** and **NumberRecord** in *Rows*. Click on *Show Me* and select *dual lines*.
+
+![](guide/x01.jpg)
+
+2. Right-click the secondary axis on the right and select *Synchronize Axis*.
+
+![](guide/x02.jpg)
+
+3. To change the colours, click on the dropdown arrow and select *Edit Colors...*.
+
+![](guide/x03.jpg)
+
+4. Go to *Tableau Classic 20* and select the colours shown below for **Events** and **Fatalities**.
+
+![](guide/x04.jpg)
+
+5. To label the lines by events or fatalities, click-and-drag **Measure Names** to *Label* in the **All** marks layer.
+
+![](guide/x05.jpg)
+
+6. Format the x-axis by right-clicking the x-axis and select *Edit Axis*.
+
+![](guide/x06.jpg)
+
+7. Remove the x-axis title by clearing the highlighted text shown below.
+
+![](guide/x07.jpg)
+
+8. Under the *Tick Marks* tab, select *Fixed* and *None* for the major and minor tick marks respectively.
+
+![](guide/x08.jpg)
+
+9. Rename the y-axis title with the same steps and change the title to *Count*.
+
+10. Remove the secondary axis title and labels by right-clicking it and un-selecting *Show Header*.
+
+![](guide/x09.jpg)
+
+11. Resize the graph so that it can fit into the tooltip. As the measure names labels are too big, click on *Label* in the **All* marks layer card, change to font size 8 and alignment to Horizontal *Left* and Vertical *Middle*.
+
+![](guide/x10.jpg)
+
+The chart is done!
+
+![](guide/x11.jpg)
 
 To create the table to show the number of events and fatalities by event type:
 
@@ -568,9 +616,17 @@ To create the table to show the number of events and fatalities by event type:
 
 ![](guide/009za.jpg)
 
-The final table will look like this:
+7. As the order of the event types differ from the main map, right-click **Event Type** and select *Sort*
 
 ![](guide/009zb.jpg)
+
+8. In the *Sort [Event Type]* pop-up window, select *Manual* under *Sort By* and arrange the event types in the order shown below.
+
+![](guide/009zb1.jpg){width=50%}
+
+The final table will look like this:
+
+![](guide/009zb2.jpg)
 
 Next, we will create the chart for the proportion of event type over time.
 
@@ -588,9 +644,17 @@ Next, we will create the chart for the proportion of event type over time.
 
 4. Edit the axis titles and resize accordingly. 
 
-The chart is completed!
+5. As the order of the event types differ from the main map, right-click **Event Type** and select *Sort* 
 
 ![](guide/009zf.jpg)
+
+6. In the *Sort [Event Type]* pop-up window, select *Manual* under *Sort By* and arrange the event types in the order shown below.
+
+![](guide/009zb1.jpg){width=50%}
+
+The chart is completed!
+
+![](guide/009zf1.jpg)
 
 Now, the tooltip for the **Country* marks layer can be created:
 
@@ -858,13 +922,15 @@ However, the data is aggregated over the six years. By using the period range sl
 
 ![](images/MapCompare.jpg)
 
-From the above, note that there is no data for Malaysia in 2015 and 2016, and Philippines in 2015. Let us take a closer look at Myanmar. In 2015, Myanmar experienced a high number of events, mainly **battles** with some **violence against civilians** in the northern region and **protests** in the central regions. In 2016 and 2017, there are visually less number of events in other parts of the country, except for the northern region. In 2018, the numbers picked up again across the country, with more **explosions** in the northern-most region, as compared to previous years. More recently in 2019 and 2020, the number of events seem to have shifted from the northern region to the north-western coast of the country.
+From the above, note that there is no data for Malaysia in 2015 and 2016, and Philippines in 2015. Let us take a closer look at Myanmar. 
 
+In 2015, Myanmar experienced a high number of events, mainly **battles** with some **violence against civilians** in the northern region, and **protests** is peppered throughout the central region. In 2016 and 2017, there are visually less number of events in other parts of the country, except for the northern region. A small cluster could also be seen forming in the western coast. In 2018, there is a slight shift of events within the northern region. In 2019, the numbers picked up again throughout the country with the events concentrated in the western and north-eastern regions. More recently in 2020, the number of **protests** seems to have decreased throughout the country but the western and north-eastern clusters seem to have grown.
 
+![](images/MapCompareMyanmar.jpg)
 
-Another interesting pattern noted is that of Thailand. From 2015 to 2019, the number of events is generally low, with the exception of Bangkok (having **protests** and **violence against civilians**) and the Thailand-Malaysia border (having a **variety of event types**). However, the number of **protests** is the highest in 2020 for Bangkok and more **protests** can be seen throughout the country. There was also visually significantly smaller number of events near the Thailand-Malaysia border.
+Another interesting pattern noted is that of Thailand. Throughout the years, the events are clustered with varying count in two regions: Bangkok and the cities near the Thailand-Malaysia border. We could also see a change in events with more **strategic developments** near the Thailand-Malaysia border in 2016 and 2017, and visually significantly smaller number of events near the Thailand-Malaysia border in 2020. For the rest of the country, the occurrences of **protests** fluctuates from 2015 to 2018 and in 2019, the number of **protests** increased and was spread out. There was also a short appearance of **battles** in the northern-most region in 2019. In 2020, the country faced wide-spread increase in **battles** in most areas.
 
-
+![](images/MapCompareThailand.jpg)
 
 ### 2. Proportion of events changes over time
 
