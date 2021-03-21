@@ -345,7 +345,7 @@ It was found that Tableau does not recognise some **City** and **State/Province*
 
 ![](guide/006b.jpg)
 
-3. Click and drag **Event Type** to *Color* and **NumberRecord** to *Size* in the *Marks* card.
+3. Click and drag **Event Type** to *Color* and **NumberRecord** to *Size* in the *Marks* card. At the **Event Type** legend, right-click and check that *Highlight Selected Items* option is selected.
 
 ![](guide/006c.jpg)
 
