@@ -359,7 +359,7 @@ It was found that Tableau does not recognise some **City** and **State/Province*
 
 Notice that there are some data points being obscured by the larger data points in blue in the screen capture below, due to the sorting order of the event types.
 
-![](guide/006g.jpg)
+![](guide/006g.jpg){width=50%}
 
 This can be rectified by changing the sorting order with the following steps:
 
@@ -373,7 +373,7 @@ This can be rectified by changing the sorting order with the following steps:
 
 Return to the map and notice that data points of the other event types can now be clearly seen.
 
-![](guide/006j.jpg)
+![](guide/006j.jpg){width=50%}
 
 ### 7. Add another *Marks* layer to the map
 
@@ -553,7 +553,7 @@ To create the number of events and fatalities chart over time:
 
 4. Go to *Tableau Classic 20* and select the colours shown below for **Events** and **Fatalities**.
 
-![](guide/x04.jpg)
+![](guide/x04.jpg){width=50%}
 
 5. To label the lines by events or fatalities, click-and-drag **Measure Names** to *Label* in the **All** marks layer.
 
@@ -565,11 +565,11 @@ To create the number of events and fatalities chart over time:
 
 7. Remove the x-axis title by clearing the highlighted text shown below.
 
-![](guide/x07.jpg)
+![](guide/x07.jpg){width=50%}
 
 8. Under the *Tick Marks* tab, select *Fixed* and *None* for the major and minor tick marks respectively.
 
-![](guide/x08.jpg)
+![](guide/x08.jpg){width=50%}
 
 9. Rename the y-axis title with the same steps and change the title to *Count*.
 
