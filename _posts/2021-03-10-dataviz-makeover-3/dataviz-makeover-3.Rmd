@@ -932,12 +932,41 @@ Another interesting pattern noted is that of Thailand. Throughout the years, the
 
 ![](images/MapCompareThailand.jpg)
 
-### 2. Proportion of events changes over time
+### 2. Proportion pattern of event type differs across countries
 
-### 3. Individual location trend may differ from overall country trend
+The proportion of event types over time for each country can be observed from the tooltip when the country is moused over on the map. The figure below shows the comparison of the tooltip information for each country, with the focus on the proportion of event types over time.
 
-### 4. has the highest number of fatalities
+![](images/MapCompareProportion.jpg)
+
+We can clearly see from the different colours that the patterns observed for each country differs. The pattern for Cambodia, Malaysia and Indonesia are most similar, with a over 50% **protests**. Vietnam's pattern is quite similar, with **protests** taking up about 50-60% and **violence against civilians** taking up the second largest proportion. Two other countries, Philippines and Laos, have significant large proportions of **violence against civilians** too. Overall, the pattern for most countries are consistent over the years, except for Laos. Interestingly, the pattern for Laos changes, with more **battles** in 2015, then **violence against civilians** in 2016-2019, with a substantial proportion of **strategic developments** in 2018-2020.
+
+### 3. Number of events generally higher than fatalities, with some exceptions
+
+In general, most countries experience a higher number of events as compared to number of fatalities. There is also little variation in the number of fatalities, except for three countries: Philippines, Myanmar and Laos. This can be observed from the line graph in the country tooltip, compiled as shown below.
+
+![](images/MapCompareFatalities.jpg)
+
+Besides visually significantly different trends for number of fatalities, the above-mentioned three countries have also seen higher number of fatalities than number of events for some periods, as indicated in the figure above. For Philippines, the number of fatalities was higher than number of events in the earlier years and dipped below the number of events in more recent years. Laos also experienced a drop in the number of fatalities in recent years. However, the number of fatalities for Myanmar fluctuated over the years, as seen from the up-down zig-zag pattern.
+
+Looking across the line graphs and the table, we can also see that the Philippines has the highest number of fatalities over the six-year period, followed by Myanmar, Thailand and Indonesia. The number of fatalities for the other countries are relatively low (50 and below). 
+
+### 4. Being 'large' does not mean 'significant'
+
+Let us take a closer look at the Philippines. From the map on the top right in the figure below, we can see that there are three locations that have much larger circles than the rest of the country, indicating these three locations have much higher number of events as compared to the rest of the country. 
+
+![](images/MapPhilippines.jpg)
+
+Intuitively, one would think that higher number of events hold a more significant role in influencing the country's trend. The number of fatalities of the battles in Marawi contributes about 25% of the total fatalities of **battles** in the country (1,174 of 4,349). However, from the proportion chart in the country tooltip, **violence against civilians** holds the highest proportion of events, indicating that the sum of all the other little events in Philippines contributes more greatly to the country's total number of events.
+
+### 5. Able to see how countries fare against others by event type
+
+From the **Armed Conflict Event by Type** graph, the countries can be observed with relative to the overall median. If we highlight an individual country, the country's graphs will be highlighted and the country's median appears, and we can compare this to the overall median. Let us take a look at the top four countries: Myanmar, Philippines, Indonesia and Thailand.
+
+![](images/LineCompare.jpg)
+
+The median number of events across all event types for both Myanmar and Philippines are higher than the corresponding overall median. For Indonesia, the medians for **strategic developments**, **explosions** and **battles** are below the overall medians, whereas for Thailand, the medians for **riots** and **protests** are below the overall medians.
+
+For the remaining counties Malaysia, Laos, Vietnam and Cambodia, 
 
 
 
-### 5. Event type with highest number of conflicts concentrated in the Philippines
